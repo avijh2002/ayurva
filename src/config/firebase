@@ -1,0 +1,17 @@
+
+import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDsVkZ-Ae-lZT5XfmUNtY6RcfacuK9cvtM",
+  authDomain: "ayurva-dc68b.firebaseapp.com",
+  projectId: "ayurva-dc68b",
+  storageBucket: "ayurva-dc68b.firebasestorage.app",
+  messagingSenderId: "733869984273",
+  appId: "1:733869984273:web:0a3cdeb2c0005c4fad3fb0",
+  measurementId: "G-L7FWLPZTD3"
+};
+
+
+const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
