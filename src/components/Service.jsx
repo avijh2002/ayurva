@@ -24,8 +24,14 @@ const Service = () => {
               "Experience targeted yoga sessions designed to improve spinal flexibility, strengthen core muscles, and reduce pain.It also Includes one-on-one sessions, guided exercises, and video recordings."
             }
           />
-          <div className="mt-2">
-            <Buttonright />
+          <div className="mt-10">
+          <Buttonright
+                  info="Book Your Yoga Session"
+                  bgColor="bg-[#283618]"
+                  textColor="text-white"
+                  arrowBg="bg-white"
+                  arrowColor="text-[#283618]"
+                />
           </div>
         </div>
         <div className="w-1/2 p-6 mx-auto flex items-center justify-center ">
@@ -43,8 +49,14 @@ const Service = () => {
               "Personalized Ayurvedic diet plans to reduce inflammation, strengthen bones, and boost  energy. It also Includes meal plans, Ayurvedic recommendations, and progress tracking"
             }
           />
-          <div className="mt-2">
-            <Buttonright />
+          <div className="mt-10">
+          <Buttonright
+                  info="Get Your Diet Plan"
+                  bgColor="bg-[#283618]"
+                  textColor="text-white"
+                  arrowBg="bg-white"
+                  arrowColor="text-[#283618]"
+                />
           </div>
         </div>
       </div>
@@ -56,8 +68,14 @@ const Service = () => {
               "Consult with experienced Ayurveda, Homeopathy, and Naturopathy specialists for  personalized treatment plans. Includes video consultations, herbal remedies, and lifestyle coaching. Also get blood tests recommendations to help your healing journey."
             }
           />
-          <div className="mt-2">
-            <Buttonright />
+          <div className="mt-10">
+          <Buttonright
+                  info="Talk To A Specialist"
+                  bgColor="bg-[#283618]"
+                  textColor="text-white"
+                  arrowBg="bg-white"
+                  arrowColor="text-[#283618]"
+                />
           </div>
         </div>
         <div className="w-1/2 p-6 mx-auto flex items-center justify-center ">
@@ -75,8 +93,14 @@ const Service = () => {
               "Improve your team's health and productivity with our tailored corporate wellness plans. We  focus on reducing back pain and improving overall well-being in the workplace."
             }
           />
-          <div className="mt-2">
-            <Buttonright bgColor={"#283618"}/>
+          <div className="mt-10">
+          <Buttonright
+                  info="Know More"
+                  bgColor="bg-[#283618]"
+                  textColor="text-white"
+                  arrowBg="bg-white"
+                  arrowColor="text-[#283618]"
+                />
           </div>
         </div>
       </div>

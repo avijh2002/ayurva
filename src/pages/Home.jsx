@@ -1,11 +1,14 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import Service from "../components/Service";
+import Homeinfo from '../components/Homeinfo';
 
 const Home = () => {
   return (
     <div>
-        Home
-        <Footer/>
+      <Homeinfo/>
+      <Service/>
+      <Footer/>
     </div>
   )
 }

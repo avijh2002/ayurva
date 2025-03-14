@@ -3,13 +3,13 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer2 = () => {
   return (
-    <footer className=" text-gray-700 py-10 px-6 md:px-16">
-      <div className="bg-white text-[#5D5D5D] h-[350px] ">
+    <footer className=" h-[300px] text-gray-700 py-10 px-6 md:px-16">
+      <div className="bg-white text-[#5D5D5D]  ">
         <div className=" flex gap-10 justify-between h-full mx-5">
           {/* Navigation Links */}
           <div className="w-1/6">
-            <h3 className="text-5xl font-semibold text-black">Explore</h3>
-            <ul className="text-2xl mt-4 space-y-2">
+            <h3 className="text-3xl font-semibold text-black">Explore</h3>
+            <ul className="text-xl mt-4 space-y-2">
               {["Home", "About Us", "Services", "Contact", "Log In"].map(
                 (item, index) => (
                   <li key={index}>
@@ -23,11 +23,11 @@ const Footer2 = () => {
           </div>
 
           {/* Contact Section */}
-          <div className="flex-col  w-1/3 pr-60">
-            <h3 className="text-5xl font-semibold text-black">Contact</h3>
-            <p className="text-2xl mt-4 space-y-2">care@ayurva.digital</p>
-            <p className="text-2xl mt-4 space-y-2">+91 8007968715</p>
-            <div className="flex justify-between w-full   text-3xl mt-20">
+          <div className="flex-col  w-1/3">
+            <h3 className="text-3xl font-semibold text-black">Contact</h3>
+            <p className="text-xl mt-4 space-y-2">care@ayurva.digital</p>
+            <p className="text-xl mt-4 space-y-2">+91 8007968715</p>
+            <div className="flex justify-between w-2/3   text-xl mt-20">
               <a href="#" className="hover:text-gray-950">
                 <i className="fab fa-instagram"></i>
               </a>
