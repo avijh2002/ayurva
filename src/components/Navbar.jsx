@@ -3,7 +3,7 @@ import myImage from "../assets/3cfe1f8fca52198217a3f59e36b7dcd5.png";
 
 const Navbar = () => {
   return (
-    <nav className="flex h-[170px] w-full  items-center px-2 py-2  border-b border-[.5px] border-[#cbcbcb]">
+    <nav className="flex mx-auto max-w-[1280px] h-[170px] w-full  items-center px-2 py-2  border-b border-[.5px] border-[#cbcbcb]">
       {/* //logo */}
       <div className="w-1/5 ml-12 mt-10">
         <img className="w-[100%]" src={myImage} alt="Image" />
