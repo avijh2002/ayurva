@@ -1,8 +1,7 @@
 import React from "react";
-import Footer2 from "../components/FooterWhite";
+import Footer2 from "../components/Footer2";
 import picklogo from "../assets/picklogo.png";
 
-import { FaPlay } from "react-icons/fa";
 import Mission from "../components/Mission";
 
 const AboutUs = () => {

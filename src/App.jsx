@@ -1,15 +1,21 @@
 import Navbar from "./components/Navbar"
-import AboutUs from "./pages/Aboutus";
+import { Toaster } from "react-hot-toast";
+import { Outlet } from "react-router-dom";
 
 
-//jksfbvysdfvsdfdvs
-const App=()=>{
+const App = () => {
+
   return (
-    <div>
-      <Navbar/>
-      <AboutUs/>
-    </div>
+    <>
+      <Toaster />
+      <Navbar />
+      <Outlet />
+    </>
   );
 };
+
+
+
+
 
 export default App;
