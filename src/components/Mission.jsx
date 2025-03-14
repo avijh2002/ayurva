@@ -3,6 +3,7 @@ import { FaPlay } from "react-icons/fa";
 import massage from "../assets/massage.png";
 import Buttonleft from "./Buttonleft";
 
+
 const Mission = () => {
   return (
     <div className="max-w-[1280px] flex justify-center gap-1 items-center text-center py-10">
@@ -20,7 +21,13 @@ const Mission = () => {
         </div>
         <div className="flex justify-end">
           {/* button left */}
-          <Buttonleft/>
+          <Buttonleft
+            info="Start your Journey"
+            bgColor="bg-white"
+            textColor="text-[#283618]"
+            arrowBg="bg-[#283618]"
+            arrowColor="text-white"
+          />
         </div>
       </div>
 

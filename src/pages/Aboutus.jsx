@@ -1,5 +1,5 @@
 import React from "react";
-import massage from "../assets/massage.png";
+import Footer2 from "../components/FooterWhite";
 import picklogo from "../assets/picklogo.png";
 
 import { FaPlay } from "react-icons/fa";
@@ -36,6 +36,9 @@ const AboutUs = () => {
 
       {/* Meet Our Team Section */}
       
+
+      {/*footer2*/}
+      <Footer2/>
     </div>
   );
 };

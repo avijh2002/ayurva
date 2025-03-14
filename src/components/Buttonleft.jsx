@@ -1,14 +1,14 @@
 import React from "react";
 import { FaAngleLeft } from "react-icons/fa";
 
-const Buttonleft = () => {
+const Buttonleft = ({ info, bgColor, textColor, arrowBg, arrowColor}) => {
   return (
-    <button className="px-2 w-[253px] py-1 bg-white text-[#283618] rounded-full flex items-center gap-4 ">
-      <div className="w-11 h-11 rounded-full bg-[#283618] flex items-center justify-center">
-        <FaAngleLeft className="text-white" />
+    <button className={`px-2 w-[253px] py-1 ${bgColor}  rounded-full flex items-center justify-baseline gap-4`}>
+      <div className={`w-11 h-11 rounded-full ${arrowBg} flex items-center justify-center`}>
+        <FaAngleLeft className={`${arrowColor} text-2xl`} />
       </div>
       <div className="flex items-center justify-center">
-        <p className="text-lg text-center font-semibold">Start your Journey</p>
+        <p className={`${textColor} text-lg text-center font-semibold`}>{info}</p>
       </div>
     </button>
   );
