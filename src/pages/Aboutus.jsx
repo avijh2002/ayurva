@@ -29,7 +29,7 @@ const AboutUs = () => {
       </div>
 
       {/* Mission Section */}
-      <div className="bg-[#283618] text-white py-16 px-6 text-center md:flex md:items-center md:justify-center">
+      <div className="max-w-[1280px] mx-auto bg-[#283618] text-white py-16 px-6 text-center md:flex md:items-center md:justify-center">
         <Mission />
       </div>
 
