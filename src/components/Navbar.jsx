@@ -27,13 +27,13 @@ const Navbar = () => {
           Home
         </NavLink>
 
-        {location.pathname === "/" ? (
+        { location.pathname === "/" ? (
           <>
             <button
               onClick={() => {
                 document
                   .getElementById("services")
-                  ?.scrollIntoView({ behavior: "smooth" });
+                  ?.scrollIntoView({ behavior: "smooth" }); 
               }}
               className="px-[24px] py-[6px] transition-all duration-150 cursor-pointer 
         hover:bg-[#283618] hover:text-white hover:rounded-4xl"
@@ -53,7 +53,7 @@ const Navbar = () => {
               FAQ
             </button>
           </>
-        ) : null}
+        ) : null} 
 
         <NavLink
           to="/about"
