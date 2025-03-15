@@ -9,7 +9,7 @@ import service2 from "../assets/Ellipse 8.png";
 
 const Service = () => {
   return (
-    <div className="max-w-[1100px] mx-auto bg-[#f2f2f2] flex-col items-center space-y-4 p-11 rounded-lg">
+    <section id="services" className="max-w-[1100px] mx-auto bg-[#f2f2f2] flex-col items-center space-y-4 p-11 rounded-lg">
       <div className="text-center p-3 -mt-6">
         <p className="text-3xl leading-[24px] font-sm ">
           Services Offered By Ayurva
@@ -104,7 +104,7 @@ const Service = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -6,6 +6,7 @@ import HeroSection from "../components/HeroSection";
 import Reviews from "../components/Reviews";
 import Specialists from "../components/Specialists";
 import WhyAyurva from "../components/WhyAyurva";
+import Faq from "../components/Faq";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <WhyAyurva />
       <Reviews />
       <Service />
+      <Faq/>
       <Footer />
     </div>
   );
