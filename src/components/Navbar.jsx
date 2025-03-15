@@ -3,7 +3,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import myImage from "../assets/3cfe1f8fca52198217a3f59e36b7dcd5.png";
 
 const Navbar = () => {
-   
   const location = useLocation(); // Get the current location
   console.log(location);
 
@@ -28,13 +27,13 @@ const Navbar = () => {
           Home
         </NavLink>
 
-        { location.pathname === "/" ? (
+        {location.pathname === "/" ? (
           <>
             <button
               onClick={() => {
                 document
                   .getElementById("services")
-                  ?.scrollIntoView({ behavior: "smooth" }); 
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="px-[24px] py-[6px] transition-all duration-150 cursor-pointer 
         hover:bg-[#283618] hover:text-white hover:rounded-4xl"
@@ -54,7 +53,7 @@ const Navbar = () => {
               FAQ
             </button>
           </>
-        ) : null} 
+        ) : null}
 
         <NavLink
           to="/about"
