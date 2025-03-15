@@ -40,7 +40,8 @@ const Faq = () => {
                 selectedQuestion.question === faq.question
                   ? "text-black font-semibold"
                   : "text-gray-400"
-              } flex justify-between items-center`}
+              } flex justify-between items-center`} 
+              // Add hover effect
             >
               <div
                 className="w-[501px] h-[68px] text-[28px] font-[400]

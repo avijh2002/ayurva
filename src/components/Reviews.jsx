@@ -58,7 +58,7 @@ const Reviews = () => {
 
   return (
     <div className="max-w-[1280px] mx-auto h-139 relative flex justify-center items-center text-[#a8a8a8]  py-16 bg-[url('/reviewBg.jpg')] ">
-        <div className="absolute inset-0 bg-[#283618]/97"></div> 
+        <div className="absolute inset-0 bg-[#283618]/94"></div> 
       <Slider {...settings} className="w-9/10 max-w-6xl px-8">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="flex flex-col items-center">

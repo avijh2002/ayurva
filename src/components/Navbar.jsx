@@ -3,10 +3,12 @@ import { NavLink, useLocation } from "react-router-dom";
 import myImage from "../assets/3cfe1f8fca52198217a3f59e36b7dcd5.png";
 
 const Navbar = () => {
-  const location = useLocation();
+   
+  const location = useLocation(); // Get the current location
+  console.log(location);
 
   return (
-    <nav className="flex mx-auto max-w-[1280px] h-[170px] w-full items-center px-2 py-2 border-b border-[.5px] border-[#cbcbcb]">
+    <nav className="flex mx-auto max-w-[1280px] h-[170px] w-full items-center px-2 py-2  border-b-[.5px] border-b-[#cbcbcb]">
       {/* Logo */}
       <div className="w-1/5 ml-12 mt-10">
         <img className="w-[100%]" src={myImage} alt="Logo" />
@@ -26,13 +28,19 @@ const Navbar = () => {
           Home
         </NavLink>
 
+
         {location.pathname === "/" ? (
+
           <>
             <button
               onClick={() => {
                 document
                   .getElementById("services")
-                  ?.scrollIntoView({ behavior: "smooth" });
+
+                  ?.scrollIntoView({ behavior: "smooth" }); 
+
+                  
+
               }}
               className="px-[24px] py-[6px] transition-all duration-150 cursor-pointer 
         hover:bg-[#283618] hover:text-white hover:rounded-4xl"
@@ -52,7 +60,9 @@ const Navbar = () => {
               FAQ
             </button>
           </>
+
         ) : null}
+
 
         <NavLink
           to="/about"

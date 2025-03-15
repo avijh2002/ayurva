@@ -2,6 +2,8 @@ import star from "../assets/star.png";
 
 
 const SpecialistCard = ({ image, rating, name, description, specialty }) => {
+
+  // Get the integer part of the rating handle the half star
   const intRating = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
   const opacity = parseInt((rating - intRating) * 100);
@@ -20,7 +22,7 @@ const SpecialistCard = ({ image, rating, name, description, specialty }) => {
         {[...Array(intRating)].map((_, i) => (
         <img key={i} src={star}alt="Banner" className="w-full h-full  my-auto object-fill" />
         ))}
-        {hasHalfStar && (
+        { hasHalfStar && (
           
           <img key={i} src={star}alt="Banner" className="w-full h-full  my-auto object-fill"  style={{ opacity: opacity / 100 }}/>
         )}
