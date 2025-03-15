@@ -6,7 +6,7 @@ import Buttonleft from "./Buttonleft";
 
 const Mission = () => {
   return (
-    <div className="max-w-[1280px] flex justify-center gap-1 items-center text-center py-10">
+    <div className="max-w-[1280px] mx-auto bg-[#283618] text-white py-16 px-6 text-center md:flex md:items-center md:justify-center">
       {/* Left Content */}
       <div className="w-full md:w-1/2 flex flex-col justify-between space-y-6 text-right">
         <div>

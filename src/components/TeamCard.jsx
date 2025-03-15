@@ -1,14 +1,30 @@
-import React from 'react'
+import React from "react";
 
-const TeamCard = () => {
+const TeamCard = ({ name, image, description, video }) => {
   return (
-    <div classname=" border-amber-950 relative h-full w-4/5 ">
-      <div className=' absolute h-[57px] w-[308px] rounded-3xl bg-white  z-1000 '></div>
-      <div className='absolute  h-[665px]  w-[343px]  rounded-xl bg-amber-800 z-5'></div>
-      <div className='absolute h-[332px]  w-[308px]  rounded-xl bg-purple-600 z-109'></div>
-      <div className='absolute h-[331px]  w-[475px] rounded-xl  bg-blue-200 z-100 '></div>
+    <div className="  relative h-full w-full ">
+      <div className="absolute h-[57px] w-[308px] left-[27px] top-[60px] rounded-3xl bg-white  z-1000 text-[24px] font-medium pt-[10px] pb-[14px] px-[100px]">
+        {name}
+      </div>
+      <div className="absolute  h-[665px]  w-[343px] left-[240px]  rounded-xl  z-5">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-auto rounded-xl object-cover mb-[27px]"
+        />
+      </div>
+      <div className="absolute h-[332px]  w-[308px] top-[257px] rounded-xl text-[20px] font-medium pt-[10px] pb-[46px] px-[32px] text-[#f7f7f7] text-right bg-[#283618] z-109">
+        {description}
+      </div>
+      <div className="absolute h-[321px]  w-[475px] rounded-3xl top-[193px] right-[0px] bg-blue-200 z-100 ">
+        <img
+          src={video}
+          alt={name}
+          className="w-full h-auto rounded-xl object-cover mb-[27px]"
+        />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default TeamCard
+export default TeamCard;
