@@ -16,7 +16,7 @@ const Service = () => {
         </p>
       </div>
       {/* cards section */}
-      <div className="w-full flex justify-center items-center gap-2 p-18 mx-auto">
+      <div className="w-full flex justify-center items-center gap-2 p-10 mx-auto">
         <div className="w-1/2 flex-col">
           <Servicetext
             para1={"Yoga Therapy for Back Pain & Spondylitis"}
