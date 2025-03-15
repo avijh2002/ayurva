@@ -3,10 +3,11 @@ import Footer2 from "../components/Footer2";
 import picklogo from "../assets/picklogo.png";
 
 import Mission from "../components/Mission";
+import Team from "../components/Team";
 
 const AboutUs = () => {
   return (
-    <div className="mx-auto w-full">
+    <div className="mx-auto max-w-[1280px]">
       {/* Header Section */}
       <div className="max-w-[1280px] flex justify-center gap-2 items-center text-center py-10 mx-auto ">
         <div className="w-1/2">
@@ -29,12 +30,12 @@ const AboutUs = () => {
       </div>
 
       {/* Mission Section */}
-      <div className="bg-[#283618] text-white py-16 px-6 text-center md:flex md:items-center md:justify-center">
+      <div className="max-w-[1280px} mx-auto bg-[#283618] text-white py-16 px-6 text-center md:flex md:items-center md:justify-center">
         <Mission />
       </div>
 
       {/* Meet Our Team Section */}
-      
+      <Team/>
 
       {/*footer2*/}
       <Footer2/>
