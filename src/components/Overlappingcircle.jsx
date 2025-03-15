@@ -3,8 +3,7 @@ import outer from "../assets/Ellipse 10.png";
 
 const Overlappingcircle = ({ image }) => {
   return (
-    <div className="relative w-78  h-72">
-      
+    <div className="relative w-78 h-72">
       <div className="absolute w-full h-full  rounded-full">
         <img src={outer} />
       </div>
@@ -16,7 +15,6 @@ const Overlappingcircle = ({ image }) => {
           alt="Yoga Pose"
           className="w-full h-full object-cover"
         />
-        
       </div>
       <div className="absolute z-1 w-full h-full bg-[#283618] rounded-full overflow-hidden top-8 left-8">
         <img
@@ -24,7 +22,6 @@ const Overlappingcircle = ({ image }) => {
           alt="Yoga Pose"
           className="w-full h-full object-cover"
         />
-        
       </div>
     </div>
   );

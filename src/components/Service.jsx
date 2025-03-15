@@ -11,12 +11,12 @@ const Service = () => {
   return (
     <div className="max-w-[1100px] mx-auto bg-[#f2f2f2] rounded-md flex-col items-center space-y-4 p-11">
       <div className="text-center p-3 -mt-6">
-        <p className="text-3xl leading-[24px]   font-sm ">
+        <p className="text-3xl leading-[24px] font-sm ">
           Services Offered By Ayurva
         </p>
       </div>
       {/* cards section */}
-      <div className="w-full flex justify-center items-center gap-2 p-18 mx-auto">
+      <div className="w-full flex justify-center items-center gap-2 p-10 mx-auto">
         <div className="w-1/2 flex-col">
           <Servicetext
             para1={"Yoga Therapy for Back Pain & Spondylitis"}
