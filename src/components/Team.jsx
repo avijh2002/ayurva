@@ -1,39 +1,91 @@
+import React from "react";
+import Slider from "react-slick";
 import TeamCard from "./TeamCard";
 import TeamCardPic1 from "../assets/teampic1.png";
-import TeamCardVdo1 from "../assets/teamvdo1.png"
+import TeamCardVdo1 from "../assets/teamvdo1.png";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Team = () => {
-  const testimonials = [
+  const testMembers = [
     {
-      text: "Answer simple questions about your pain levels, lifestyle, and symptoms. This will help us  understand your needs better. After completing the test, you will receive an initial pain analysis and personalized recommendations.",
-      image: TeamCardPic1,
       name: "John Doe",
+      image: TeamCardPic1,
+      description:
+        "Answer simple questions about your pain levels, lifestyle, and symptoms. This will help us understand your needs better. After completing the test, you will receive an initial pain analysis and personalized recommendations.",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
     {
-      text: "“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.”",
+      name: "Jane Smith",
       image: TeamCardPic1,
-      name: "Client Name",
+      description:
+        "We analyze your pain levels and lifestyle through a quick test. Get personalized recommendations instantly.",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
     {
-      text: "“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.”",
+      name: "Alice Johnson",
       image: TeamCardPic1,
-      name: "Client Name",
+      description:
+        "Personalized pain analysis based on simple questions. Your journey to pain relief starts here.",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
   ];
 
+  const CustomPrevArrow = ({ className, style, onClick }) => (
+    <button
+      className="absolute -top-20 left-6 z-10 text-gray-400 hover:text-white"
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <ChevronLeft size={42} />
+    </button>
+  );
+  
+  const CustomNextArrow = ({ className, style, onClick }) => (
+    <button
+      className="absolute -top-20 right-6 z-10 text-gray-400 hover:text-white"
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <ChevronRight size={42} />
+    </button>
+  );
+
+
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      nextArrow: <CustomNextArrow />, 
+      prevArrow: <CustomPrevArrow />
+    };
+
   return (
-    <div className="max-w-[1280px] mx-auto h-auto  bg-[#F3F3F3]">
-      <div className="h-[58px] w-[344px] text-[40px] font-medium mx-auto mt-[104px] mb-[56px]">
+    <div className="max-w-[1280px] mx-auto h-auto pt-[104px] bg-[#F3F3F3]">
+      <div className="text-[40px] font-medium text-center mb-[56px]">
         Meet our Team
       </div>
 
-      <div className="  ml-[163px] mr-[96px] h-[665px]  mb-[136px]">
-        <TeamCard
-          name="John Doe"
-          image={TeamCardPic1}
-          description="Answer simple questions about your pain levels, lifestyle, and symptoms. This will help us  understand your needs better. After completing the test, you will receive an initial pain analysis and personalized recommendations."
-          video={TeamCardVdo1}
-        />
+      <div className=" h-auto">
+        <Slider {...settings}>
+          {testMembers.map((member, index) => (
+            
+            <div key={index} className="  ml-[163px] mr-[96px] h-[665px]  mb-[136px]">
+             <TeamCard
+                name={member.name}
+                image={member.image}
+                description={member.description}
+                video={member.video}
+              />
+          </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );

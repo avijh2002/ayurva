@@ -6,6 +6,8 @@ import App from './App.jsx'
 import Home from "./pages/Home.jsx";
 import AboutUs from "./pages/Aboutus";
 import Contactus from "./pages/Contactus.jsx";
+import Assessment from './pages/Assessment.jsx';
+import Result from './components/Result.jsx';
 
 
 
@@ -28,6 +30,10 @@ function RoutesComponent() {
         <Route
           path="/contact"
           element={<Contactus />}
+        />
+        <Route
+          path="/assessment"
+          element={<Assessment />}
         />
       </Route>
     )

@@ -3,7 +3,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer2 = () => {
   return (
-    <footer className="max-w-[1280px] mx-auto h-auto bg text-gray-700 py-10 px-6 md:px-16">
+    <footer className="max-w-[1280px] mx-auto h-auto bg-white text-gray-700 py-10 px-6 md:px-16">
       <div className="bg-white text-[#5D5D5D]  ">
         <div className=" flex gap-10 justify-between h-full mx-5">
           {/* Navigation Links */}
