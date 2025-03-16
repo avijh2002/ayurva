@@ -34,7 +34,7 @@ const Footer = () => {
                   info="Take a 2 minute Test"
                   bgColor="bg-[#283618]"
                   textColor="text-white"
-                  arrowBg="bg-white"
+                  arrowBg="bg-[#F2EFE7]"
                   arrowColor="text-[#283618]"
                 />
               </div>

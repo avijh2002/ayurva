@@ -7,6 +7,7 @@ import Reviews from "../components/Reviews";
 import Specialists from "../components/Specialists";
 import WhyAyurva from "../components/WhyAyurva";
 import Faq from "../components/Faq";
+import Steps from "../components/Steps";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <div className="mx-auto max-w-[1280px] h-[#151px] py-16 bg-[url('/bells.jpg')] bg-cover bg-center opacity-7"></div>
       <WhyAyurva />
       <Reviews />
+      <Steps/>
       <Service />
       <Faq/>
       <Footer />

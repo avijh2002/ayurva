@@ -29,7 +29,7 @@ const Service = () => {
                   info="Book Your Yoga Session"
                   bgColor="bg-[#283618]"
                   textColor="text-white"
-                  arrowBg="bg-white"
+                  arrowBg="bg-[#F2EFE7]"
                   arrowColor="text-[#283618]"
                 />
           </div>
@@ -54,7 +54,7 @@ const Service = () => {
                   info="Get Your Diet Plan"
                   bgColor="bg-[#283618]"
                   textColor="text-white"
-                  arrowBg="bg-white"
+                  arrowBg="bg-[#F2EFE7]"
                   arrowColor="text-[#283618]"
                 />
           </div>
@@ -73,7 +73,7 @@ const Service = () => {
                   info="Talk To A Specialist"
                   bgColor="bg-[#283618]"
                   textColor="text-white"
-                  arrowBg="bg-white"
+                  arrowBg="bg-[#F2EFE7]"
                   arrowColor="text-[#283618]"
                 />
           </div>
@@ -98,7 +98,7 @@ const Service = () => {
                   info="Know More"
                   bgColor="bg-[#283618]"
                   textColor="text-white"
-                  arrowBg="bg-white"
+                  arrowBg="bg-[#F2EFE7]"
                   arrowColor="text-[#283618]"
                 />
           </div>

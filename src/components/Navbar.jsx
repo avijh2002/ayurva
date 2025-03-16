@@ -1,30 +1,38 @@
-import React from "react";
+import {useState, useEffect} from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import myImage from "../assets/3cfe1f8fca52198217a3f59e36b7dcd5.png";
 
 const Navbar = () => {
-  const location = useLocation(); // Get the current location
-     
-  const path = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [scrollTarget, setScrollTarget] = useState(null);
 
-  const handlerCLick = async (name) => {
-    console.log(name);
-   
-    if (location.pathname !== "/") {
-      path("/"); // giv delay so that react catches the dom before scrolliong 
+  useEffect(() => {
+    if (scrollTarget) {
       setTimeout(() => {
-        scrollToElement(name);
-      }, 300); // Small delay to wait for DOM update
+        scrollToElement(scrollTarget);
+        setScrollTarget(null); // Reset after scrolling
+      }, 100); // Small delay for rendering
+    }
+  }, [location.pathname]); // Runs when path changes
+
+  const handleClick = (name) => {
+
+    if (location.pathname !== "/") {
+      setScrollTarget(name); // Save the target
+      navigate("/"); // Change route
     } else {
       scrollToElement(name);
     }
   };
-  
+
   const scrollToElement = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.warn(`Element with id '${id}' not found`);
     }
   };
 
@@ -51,7 +59,7 @@ const Navbar = () => {
 
         <button
           onClick={() => {
-            handlerCLick("services");
+            handleClick("services");
           }}
           className="px-[24px] py-[6px] transition-all duration-150 cursor-pointer 
         hover:bg-[#283618] hover:text-white hover:rounded-4xl"
@@ -61,7 +69,8 @@ const Navbar = () => {
 
         <button
           onClick={() => {
-            handlerCLick("faq");}}
+            handleClick("faq");
+          }}
           className="px-[24px] py-[6px] transition-all duration-150 cursor-pointer 
         hover:bg-[#283618] hover:text-white hover:rounded-4xl"
         >
