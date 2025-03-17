@@ -1,20 +1,26 @@
-import React, { useState } from "react";
+import React , {useState} from "react";
+import { collection,addDoc } from "firebase/firestore";
+import addUser from "../config/addUser";
+
+
 
 const Contactform = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-  });
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log(formData);
-
-    // Reset form properly
-    setFormData({ name: "", email: "", subject: "" });
-  };
-
+  const [formData ,setFormData] = useState({
+       name : "",
+       email : "",
+       subject : "",
+    })
+    const submitHandler = async (e) =>{
+        e.preventDefault()
+        console.log(formData);
+        setFormData(formData);
+        await addUser(formData);
+        formData.name = "";
+        formData.email = "";
+        formData.subject = "";
+        setFormData({...formData})
+    }
+   
   return (
     <div className="mx-auto  max-w-[1280px] flex flex-col md:flex-row gap-2 bg-[#283618] mt-[64px] rounded-3xl p-6 md:p-8">
       {/* Left - Form Section */}

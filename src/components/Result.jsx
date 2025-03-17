@@ -39,7 +39,7 @@ const Result = ({ reset }) => {
             {result.resText}
           </p>
         </div>
-        <div className="flex flex-col justify-center gap-[61px]  mt-[58px] mx-auto ">
+        <div className="flex flex-col justify-center gap-[61px] w-fit mt-[58px] mx-auto ">
           <div className="flex items-center justify-start gap-[36px]">
             <div className="h-[321px] w-[475px] rounded-3xl bg-gray">
               <iframe
@@ -59,10 +59,10 @@ const Result = ({ reset }) => {
                 team will get in Touch
               </div>
 
-              <form className="w-8/10 "> 
+              <form className="w-4/5 "> 
                 <input className="w-full py-[19px] pl-[21px] mb-[25px] rounded-lg border-1 border-[#A8A8A8]" placeholder="Enter Mobile Number"></input>
 
-                <button className="w-full px-auto py-auto h-[48px] bg-[#283618] rounded-2xl">Save</button>
+                <button className="w-full px-auto py-auto h-[48px] border-[.5px] bg-[#283618] text-white rounded-2xl">Save</button>
               </form>
             </div>
           </div>

@@ -21,7 +21,7 @@ const Mission = () => {
         </div>
         <div className="flex justify-end">
           {/* button left */}
-          <Buttonleft
+         <Buttonleft
             info="Start your Journey"
             bgColor="bg-white"
             textColor="text-[#283618]"

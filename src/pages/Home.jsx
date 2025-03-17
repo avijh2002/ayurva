@@ -1,4 +1,4 @@
-import React from "react";
+import {useEffect} from "react";
 import Footer from "../components/Footer";
 import Service from "../components/Service";
 import Homeinfo from "../components/Homeinfo";
@@ -10,6 +10,9 @@ import Faq from "../components/Faq";
 import Steps from "../components/Steps";
 
 const Home = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []); 
   return (
     <div>
       <HeroSection />

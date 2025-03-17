@@ -1,24 +1,40 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Qnabox from "./Qnabox";
 import { FaAngleLeft } from "react-icons/fa";
 import QuizButton from "./QuizButton";
+import fetchQuestions from "../config/fetchQuestions";
+import { Loader } from "lucide-react";
 
-const questions = [
-  {
-    question: "Where do you experience pain or stiffness?",
-    options: ["Shoulder and Neck", "Lower Back", "Knee Pain"],
-  },
-  {
-    question: "How severe is your pain on a scale of 1 to 10?",
-    options: ["Mild (1-3)", "Moderate (4-6)", "Severe (7-10)"],
-  },
-  {
-    question: "How long have you been experiencing this pain?",
-    options: ["Less than a week", "1-3 months", "More than 3 months"],
-  },
-];
+// const questions = [
+//   {
+//     question: "Where do you experience pain or stiffness?",
+//     options: ["Shoulder and Neck", "Lower Back", "Knee Pain"],
+//   },
+//   {
+//     question: "How severe is your pain on a scale of 1 to 10?",
+//     options: ["Mild (1-3)", "Moderate (4-6)", "Severe (7-10)"],
+//   },
+//   {
+//     question: "How long have you been experiencing this pain?",
+//     options: ["Less than a week", "1-3 months", "More than 3 months"],
+//   },
+// ];
 
 const Qna = ({ onComplete }) => {
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    async function loadQuestions() {
+      const fetchedQuestions = await fetchQuestions();
+      setQuestions(fetchedQuestions)
+      console.log("Fetched Questions at qna:", fetchedQuestions[0]);
+    }
+
+    loadQuestions();
+  }, []);
+
+  
+ 
   const totalQuestions = questions.length;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answered, setAnswered] = useState(0);
@@ -46,9 +62,10 @@ const Qna = ({ onComplete }) => {
     if (currentQuestion > 0) {
       setCurrentQuestion((prev) => prev - 1);
       setAnswered((prev) => prev - 1);
-      setBg(null); // Reset selected option
+      setBg(null); 
     }
   };
+  if (questions.length === 0) return <div className="mt-10 h-full flex justify-center items-center"><Loader/></div>;
 
   return (
     <div className="max-w-[1280px] mx-auto flex flex-col h-auto pt-[41px]">
@@ -88,8 +105,8 @@ const Qna = ({ onComplete }) => {
           <p>{questions[currentQuestion].question}</p>
         </div>
 
-        <div className="flex flex-col items-end justify-center gap-[61px] mt-[58px] mx-auto">
-          <div className="flex items-center justify-start gap-[31px]">
+        <div className="flex flex-col items-end justify-center gap-[61px]  mt-[58px] w-fit mx-auto">
+          <div className="flex  gap-[31px] ">
             {questions[currentQuestion].options.map((text, index) => (
               <Qnabox
                 key={index}
