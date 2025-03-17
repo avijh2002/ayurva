@@ -1,8 +1,6 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import { collection,addDoc } from "firebase/firestore";
 import addUser from "../config/addUser";
-
-
 
 const Contactform = () => {
   const [formData ,setFormData] = useState({
