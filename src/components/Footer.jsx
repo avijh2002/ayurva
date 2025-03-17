@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../assets/3cfe1f8fca52198217a3f59e36b7dcd5.png";
+import myImage from "../assets/logo44.png";
 import footerBanner from "../assets/footerBanner.png"
 import Buttonright from "./Buttonright";
 import "@fortawesome/fontawesome-free/css/all.min.css";

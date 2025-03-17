@@ -3,6 +3,7 @@ import Leaf from "../assets/leaf.png";
 import User from "../assets/sage.png";
 import Bowl from "../assets/bowl.png";
 import Stethoscope from "../assets/Stethoscope.png";
+
 const services = [
   {
     image: Leaf,
@@ -36,29 +37,33 @@ const services = [
 
 const WhyAyurva = () => {
   return (
-    <section className="max-w-[1280px] mx-auto  px-[70px] text-center ">
-      <h2 className="text-[40px] font-semibold text-black  mb-[71px] mt-[78px]">
+    <section className="max-w-[1280px] mx-auto px-6  text-center">
+      {/* Heading */}
+      <h2 className="text-2xl md:text-4xl font-semibold text-black mt-16 mb-12">
         Why Choose Ayurva?
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-[71px]">
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6  mx-auto mb-12 w-full ">
         {services.map((service, index) => (
           <div
             key={index}
-            className={`p-6 rounded-lg shadow-sm ${service.bgColor} flex flex-col items-start text-left`}
+            className={`p-4 h-[385px] w-full md:p-6 rounded-3xl shadow-sm ${service.bgColor} flex flex-col md:items-start items-center  text-left `}
           >
-            <div className="h-30 w-30">
-              <img src={service.image} alt="hero1" className="" />
-            </div>
+            <img src={service.image} alt="hero1" className="md:h-30 md:w-30" />
 
-            <h3 className="text-xl font-semibold text-black mt-4">
+            <h3 className="text-lg md:text-4xl font-semibold text-black mt-4">
               {service.title}
             </h3>
-            <p className="text-[#757575] mt-2">{service.description}</p>
+            <p className="text-sm md:text-lg text-center md:text-left  text-[#757575] mt-2">
+              {service.description}
+            </p>
           </div>
         ))}
       </div>
 
-      <div className="w-full h-auto flex justify-center mb-[85px]">
+      {/* Button */}
+      <div className="w-full flex justify-center mb-16">
         <Buttonright
           info="Start Your Journey"
           bgColor="bg-[#283618]"

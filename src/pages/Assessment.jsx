@@ -7,12 +7,12 @@ import { useEffect } from "react";
 const Assessment = () => {
   const [isCompleted, setIsCompleted] = useState(false);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); 
   }, []); 
 
   return (
     <div>
-      {isCompleted? <Result  reset={() => setIsCompleted(false)} /> : <Qna onComplete={() => setIsCompleted(true)} />}
+      {isCompleted ? <Result  reset={() => setIsCompleted(false)} /> : <Qna onComplete={() => setIsCompleted(true)} />}
       <Footer2 />
     </div>
   );

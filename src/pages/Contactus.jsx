@@ -2,7 +2,7 @@ import Contactform from "../components/Contactform"
 import Footer2 from "../components/Footer2"
 const Contactus = () => {
   return (
-    <div>
+    <div className="max-w-[1280px] mx-auto p-4">
          <Contactform />
         <Footer2/>
     </div>
