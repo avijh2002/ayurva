@@ -24,7 +24,7 @@ const Qna = ({ onComplete }) => {
   const [answered, setAnswered] = useState(0);
   const [bg, setBg] = useState(null);
 
-  const progress = ((answered) / totalQuestions) * 100;
+  const progress = (answered / totalQuestions) * 100;
 
   const handleNext = () => {
     if (bg === null) {
@@ -32,7 +32,8 @@ const Qna = ({ onComplete }) => {
       return;
     }
 
-    if (currentQuestion < totalQuestions - 1) {
+    if (currentQuestion < totalQuestions - 1)
+      {
       setCurrentQuestion((prev) => prev + 1);
       setAnswered((prev) => prev + 1);
       setBg(null);
@@ -56,16 +57,17 @@ const Qna = ({ onComplete }) => {
           2-Minute At-Home Pain Assessment
         </p>
         <p className="text-[#858585] text-[20px] font-normal">
-          Answer simple questions about your pain levels, lifestyle, and symptoms.
-          This will help us understand your needs better. After completing the test,
-          you will receive an initial pain analysis and personalized recommendations.
+          Answer simple questions about your pain levels, lifestyle, and
+          symptoms. This will help us understand your needs better. After
+          completing the test, you will receive an initial pain analysis and
+          personalized recommendations.
         </p>
       </div>
       <div className="w-auto mx-[49px] h-auto rounded-xl bg-[#283618] flex-col items-center justify-center p-8 pb-[75px] mb-[55px]">
         <div className="flex items-center mb-[30px]">
-          <button 
-            className="w-11 h-11 rounded-full bg-white flex items-center justify-center mx-auto" 
-            onClick={handlePrevious} 
+          <button
+            className="w-11 h-11 rounded-full bg-white flex items-center justify-center mx-auto"
+            onClick={handlePrevious}
             disabled={currentQuestion === 0} // Disable on first question
           >
             <FaAngleLeft className="text-lg font-extralight text-[#283618]" />
@@ -89,7 +91,13 @@ const Qna = ({ onComplete }) => {
         <div className="flex flex-col items-end justify-center gap-[61px] mt-[58px] mx-auto">
           <div className="flex items-center justify-start gap-[31px]">
             {questions[currentQuestion].options.map((text, index) => (
-              <Qnabox key={index} sno={index} bg={bg} data={text} setBg={setBg} />
+              <Qnabox
+                key={index}
+                sno={index}
+                bg={bg}
+                data={text}
+                setBg={setBg}
+              />
             ))}
           </div>
 

@@ -36,7 +36,7 @@ const Steps = () => {
 
       <div className="flex gap-6">
         {/* Left Steps Navigation */}
-        <div className="w-1/3 ">
+        <div className="w-1/3">
           {stepsData.map((item, index) => (
             <p
               key={index}

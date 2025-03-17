@@ -1,4 +1,4 @@
-import myImage from "../assets/3cfe1f8fca52198217a3f59e36b7dcd5.png";
+import myImage from "../assets/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer2 = () => {
