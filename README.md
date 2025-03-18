@@ -19,6 +19,9 @@ Ayurva is a project dedicated to promoting holistic health and wellness through 
   ```bash
   cd ayurva
   ```
+  ```bash
+  cd ayurva
+  ```
 3. Install dependencies:
   ```bash
   npm install
