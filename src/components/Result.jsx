@@ -17,7 +17,7 @@ const Result = ({ reset }) => {
 
   return (
     <div className="max-w-[1280px]  mx-auto flex flex-col  h-auto pt-[41px] ">
-      <div className="w-auto mx-[49px] h-auto rounded-xl bg-[#283618] flex-col items-center justify-center p-8 pb-[75px] mb-[55px]">
+      <div className="w-auto md:mx-[49px] h-auto rounded-xl bg-[#283618] flex-col items-center justify-center md:p-8 md:pb-[75px] md:mb-[55px]">
         <div className="flex items-center mb-[30px]">
           <button
             onClick={reset}
@@ -39,9 +39,9 @@ const Result = ({ reset }) => {
             {result.resText}
           </p>
         </div>
-        <div className="flex flex-col justify-center gap-[61px] w-fit mt-[58px] mx-auto ">
-          <div className="flex items-center justify-start gap-[36px]">
-            <div className="h-[321px] w-[475px] rounded-3xl bg-gray">
+        <div className="flex flex-col justify-center gap-[61px] w-auto mt-[58px] mx-auto bg-amber-400">
+          <div className="flex flex-col md:flex-row items-center justify-start gap-[36px] bg-amber-700">
+            <div className="w-1/2 md:h-[321px] md:w-[475px] rounded-3xl bg-gray">
               <iframe
                 width="100%"
                 height="100%"
@@ -53,7 +53,7 @@ const Result = ({ reset }) => {
               ></iframe>
             </div>
 
-            <div className="h-[321px] w-[515px] flex flex-col rounded-3xl items-center bg-white">
+            <div className="w-1/2 md:h-[321px] md:w-[515px] flex flex-col rounded-3xl items-center bg-white">
               <div className=" h-[87px] mx-[35px] mt-[35px] mb-[25px] text-center text-[24px] font-medium leading-none px-1">
                 For Expert Consultation, enter your mobile number and one of our
                 team will get in Touch
@@ -67,7 +67,7 @@ const Result = ({ reset }) => {
             </div>
           </div>
 
-          <div onClick={handleHome} className="ml-[27px]">
+          <div onClick={handleHome} className="md:ml-[27px]">
             <ResultButton />
           </div>
         </div>
@@ -77,3 +77,7 @@ const Result = ({ reset }) => {
 };
 
 export default Result;
+
+
+
+
