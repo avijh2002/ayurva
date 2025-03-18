@@ -25,22 +25,24 @@ const Qna = ({ onComplete }) => {
   const [question, setQuestion] = useState(null);
 
   useEffect(() => {
-<<
-=======
-    async function loadQuestions() {
-      const fetchedQuestions = await fetchQuestions();
-      setQuestions(fetchedQuestions)
-      console.log("Fetched Questions at qna:", fetchedQuestions[0]);
-    }
-
+    const loadQuestions = async () => {
+      const data = await fetchQuestions(currentQuestionID);
+      setQuestion(data);
+      console.log("qna:", data);
+    };
     loadQuestions();
-  }, []);
->>>>>>> 62752d3 (responsive update)
+  }, [currentQuestionID]);
 
+  useEffect(() => {
+    if (question?.result) {
+      onComplete();
+    }
+  }, [question, onComplete]);
   
- 
-  const totalQuestions = questions.length;
+
+  const totalQuestions = 10;
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedOption, setSelectedOption] = useState(null);
   const [answered, setAnswered] = useState(0);
   const [bg, setBg] = useState(null);
 
@@ -51,14 +53,12 @@ const Qna = ({ onComplete }) => {
       alert("Please select an option before proceeding!");
       return;
     }
-
-    if (currentQuestion < totalQuestions - 1) {
-      setCurrentQuestion((prev) => prev + 1);
+    console.log(selectedOption);
+    setCurrentQuestionID(question?.next?.[selectedOption]);
+    setCurrentQuestion((prev) => prev + 1);
       setAnswered((prev) => prev + 1);
       setBg(null);
-    } else {
-      onComplete();
-    }
+    
   };
 
   const handlePrevious = () => {
@@ -69,13 +69,14 @@ const Qna = ({ onComplete }) => {
     }
   };
 
-  if (questions.length === 0)
+  if (!question)
     return (
       <div className="mt-10 h-full flex justify-center items-center">
         <Loader />
       </div>
     );
 
+   
   return (
     <div className="max-w-[1280px] mx-auto flex flex-col h-auto pt-[41px]">
       <div className="w-auto flex flex-col gap-2 justify-between items-center text-center mb-[27px] mx-4 lg:mx-[42px]">
@@ -111,17 +112,24 @@ const Qna = ({ onComplete }) => {
         </div>
 
         <div className="flex items-center justify-center text-xl text-center sm:text-2xl lg:text-3xl text-white">
-          <p>{questions[currentQuestion].question}</p>
+          <p>{question.question}</p>
         </div>
 
         <div className="flex flex-wrap justify-center  gap-[31px] mt-[58px]">
-          {questions[currentQuestion].options.map((text, index) => (
-            <Qnabox key={index} sno={index} bg={bg} data={text} setBg={setBg} />
+          {question?.options?.map((option, index) => (
+            <Qnabox
+              key={option}
+              onClickHandler={() => setSelectedOption(option)}
+              sno={index}
+              bg={bg}
+              data={option}
+              setBg={setBg}
+            />
           ))}
         </div>
 
         <div className="mt-8 flex justify-end md:mr-[27px]">
-          <QuizButton onClick={handleNext} />
+          <QuizButton onClick={() => handleNext()} />
         </div>
       </div>
     </div>
