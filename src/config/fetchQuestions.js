@@ -3,7 +3,7 @@ import { db } from "../config/firebase";
 
 async function fetchQuestions() {
     try {
-        const questionsRef = collection(db, "questions");
+        const questionsRef = collection(db, "questions"); 
         const querySnapshot = await getDocs(questionsRef);
 
         const questionsArray = querySnapshot.docs.map(doc => {

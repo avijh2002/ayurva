@@ -1,0 +1,78 @@
+questions (Collection)
+   ├── Q1 (Document)
+   │     ├── question: "Where do you experience pain or stiffness?"
+   │     ├── type: "radio"
+   │     ├── options: ["Neck & Shoulders", "Lower Back & Hips", "Both Neck & Lower Back"]
+   │     ├── next: { 
+   │           "Neck & Shoulders": "Q2A", 
+   │           "Lower Back & Hips": "Q2B", 
+   │           "Both Neck & Lower Back": "Q2C" 
+   │        }
+   │
+   ├── Q2A (Document)
+   │     ├── question: "Describe your neck pain."
+   │     ├── type: "checkbox"
+   │     ├── options: ["Dull, aching pain", "Sharp pain when moving head", "Tingling sensation in arms"]
+   │     ├── next: { 
+   │           "Dull, aching pain": "PostureCorrection", 
+   │           "Sharp pain when moving head": "Q3A", 
+   │           "Tingling sensation in arms": "Q3A" 
+   │        }
+   │
+   ├── Q3A (Document)
+   │     ├── question: "Perform the Chin-to-Chest Test. Is it painful?"
+   │     ├── type: "test"
+   │     ├── instructions: "Try touching your chin to your chest."
+   │     ├── options: ["Pain/Stiffness", "No Pain"]
+   │     ├── next: { 
+   │           "Pain/Stiffness": "CervicalSpondylitis", 
+   │           "No Pain": "PostureCorrection" 
+   │        }
+   │
+   ├── Q2B (Document)
+   │     ├── question: "Describe your lower back pain."
+   │     ├── type: "radio"
+   │     ├── options: ["Pain worsens after sitting", "Sharp shooting pain down the leg", "Stiffness improves with movement"]
+   │     ├── next: { 
+   │           "Pain worsens after sitting": "Q3B", 
+   │           "Sharp shooting pain down the leg": "Q3C", 
+   │           "Stiffness improves with movement": "Q3B" 
+   │        }
+   │
+   ├── Q3B (Document)
+   │     ├── question: "Perform the Schober’s Test. Did the distance increase?"
+   │     ├── type: "test"
+   │     ├── instructions: "Bend forward and check if your lower back stretches beyond 5cm."
+   │     ├── options: ["Yes", "No"]
+   │     ├── next: { 
+   │           "Yes": "MechanicalBackPain", 
+   │           "No": "PossibleSpondylitis" 
+   │        }
+   │
+   ├── Q3C (Document)
+   │     ├── question: "Perform the Straight Leg Raise (SLR) Test. Does pain radiate down the leg?"
+   │     ├── type: "test"
+   │     ├── instructions: "Lie down and raise your leg straight up."
+   │     ├── options: ["Yes", "No"]
+   │     ├── next: { 
+   │           "Yes": "Sciatica", 
+   │           "No": "MechanicalBackPain" 
+   │        }
+   │
+   ├── PostureCorrection (Document)
+   │     ├── result: "You may have posture-related issues. Follow a posture correction plan."
+   │
+   ├── CervicalSpondylitis (Document)
+   │     ├── result: "You might have Cervical Spondylitis. Consult a specialist."
+   │
+   ├── Sciatica (Document)
+   │     ├── result: "You might have Sciatica. Consult a physiotherapist."
+   │
+   ├── MechanicalBackPain (Document)
+   │     ├── result: "You may have Mechanical Back Pain. Try exercises and posture correction."
+   │
+   ├── PossibleSpondylitis (Document)
+   │     ├── result: "You might have Spondylitis. Consider consulting a doctor."
+   │
+   ├── AnkylosingSpondylitis (Document)
+   │     ├── result: "You might have Ankylosing Spondylitis. Seek medical advice."
