@@ -5,6 +5,21 @@ import QuizButton from "./QuizButton";
 import fetchQuestions from "../config/fetchQuestions";
 import { Loader } from "lucide-react";
 
+// const questions = [
+//   {
+//     question: "Where do you experience pain or stiffness?",
+//     options: ["Shoulder and Neck", "Lower Back", "Knee Pain"],
+//   },
+//   {
+//     question: "How severe is your pain on a scale of 1 to 10?",
+//     options: ["Mild (1-3)", "Moderate (4-6)", "Severe (7-10)"],
+//   },
+//   {
+//     question: "How long have you been experiencing this pain?",
+//     options: ["Less than a week", "1-3 months", "More than 3 months"],
+//   },
+// ];
+
 const Qna = ({ onComplete }) => {
   const [currentQuestionID, setCurrentQuestionID] = useState("Q1");
   const [question, setQuestion] = useState(null);
@@ -14,12 +29,16 @@ const Qna = ({ onComplete }) => {
 =======
     async function loadQuestions() {
       const fetchedQuestions = await fetchQuestions();
-      setQuestions(fetchedQuestions);
+      setQuestions(fetchedQuestions)
+      console.log("Fetched Questions at qna:", fetchedQuestions[0]);
     }
+
     loadQuestions();
   }, []);
 >>>>>>> 62752d3 (responsive update)
 
+  
+ 
   const totalQuestions = questions.length;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answered, setAnswered] = useState(0);
