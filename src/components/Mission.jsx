@@ -3,15 +3,25 @@ import { FaPlay } from "react-icons/fa";
 import massage from "../assets/massage.png";
 import Buttonleft from "./Buttonleft";
 
-
 const Mission = () => {
   return (
-    <div className="max-w-[1280px] mx-auto bg-[#283618] text-white py-16 px-6 text-center md:flex md:items-center md:justify-center">
+    <div className="max-w-[1280px] mx-auto bg-[#283618] text-white py-16 px-6 text-center flex flex-col md:flex-row-reverse md:items-center  md:justify-between gap-10 sm:py-40 sm:px-28">
+      {/* Right Image (Stacked Below on Small Screens) */}
+      <div className="w-full  md:w-1/2 flex justify-center rounded-4xl">
+        <img
+          src={massage}
+          alt="Our Mission"
+          className="rounded-2xl w-full sm:w-[413px] h-[252px] sm:h-[491px] object-cover"
+        />
+      </div>
+
       {/* Left Content */}
-      <div className="w-full md:w-1/2 flex flex-col justify-between space-y-6 text-right">
+      <div className="w-full md:w-1/2 flex flex-col justify-between  text-center md:text-right">
         <div>
-          <h2 className="text-4xl font-semibold text-white">Our Mission</h2>
-          <p className="mt-4 text-3xl text-white leading-relaxed">
+          <h2 className="text-2xl sm:text-5xl md:text-5xl  font-semibold text-white">
+            Our Mission
+          </h2>
+          <p className="mt-3 mb-9 text-sm sm:text-3xl md:text-[26px] md:mt-6 md:mb-18 md:leading-none">
             We believe in addressing the root cause of pain, not just masking
             the symptoms. Our approach leverages the power of Ayurveda,
             Homeopathy, and natural, side-effect-free solutions. We also guide
@@ -19,9 +29,9 @@ const Mission = () => {
             health.
           </p>
         </div>
-        <div className="flex justify-end">
-          {/* button left */}
-         <Buttonleft
+        <div className="flex justify-center md:justify-end">
+          {/* Button Left */}
+          <Buttonleft
             info="Start your Journey"
             bgColor="bg-white"
             textColor="text-[#283618]"
@@ -29,15 +39,6 @@ const Mission = () => {
             arrowColor="text-white"
           />
         </div>
-      </div>
-
-      {/* Right Image */}
-      <div className="w-full md:w-1/2 flex justify-center">
-        <img
-          src={massage}
-          alt="Our Mission"
-          className="rounded-2xl w-[300px] md:w-[413px] h-[320px] md:h-[491px] object-cover"
-        />
       </div>
     </div>
   );

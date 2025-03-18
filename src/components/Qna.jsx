@@ -65,6 +65,8 @@ const Qna = ({ onComplete }) => {
       setBg(null); 
     }
   };
+
+  
   if (questions.length === 0) return <div className="mt-10 h-full flex justify-center items-center"><Loader/></div>;
 
   return (

@@ -12,10 +12,7 @@ const AboutUs = () => {
       {/* Mission Section */}
       <About/>
       <Mission />
-      <Team/>
-     
-
-      {/*footer2*/}
+      {/* <Team/> */}
       <Footer2/>
     </div>
   );
