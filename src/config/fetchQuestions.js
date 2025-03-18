@@ -1,31 +1,24 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase";
 
-async function fetchQuestions() {
-    try {
-        const questionsRef = collection(db, "questions"); 
-        const querySnapshot = await getDocs(questionsRef);
+// import { db } from "./firebaseConfig"; // Import Firestore instance
+import { doc, getDoc } from "firebase/firestore";
 
-        const questionsArray = querySnapshot.docs.map(doc => {
-            const data = doc.data();
-            return {
-                id: doc.id,
-                question: data.question || "",
-                options: data.options || [] 
-            };
-        });
-
-        questionsArray.sort((a, b) => {
-            const numA = parseInt(a.id.replace("q", ""), 10);
-            const numB = parseInt(b.id.replace("q", ""), 10);
-            return numA - numB;
-        });
-
-        return questionsArray;
-    } catch (error) {
-        console.error("Error fetching questions:", error);
-        return [];
+// Function to fetch a question from Firestore
+export const fetchQuestions = async (questionID) => {
+  try {
+    const questionDoc = await getDoc(doc(db, "questions", questionID));
+    if (questionDoc.exists()) {
+        console.log(questionDoc.data());
+      return questionDoc.data(); // Return the question data
+    } else {
+      return null; // Handle case where question doesn't exist
     }
-}
+  } catch (error) {
+    console.error("Error fetching question:", error);
+    return null;
+  }
+};
+
 
 export default fetchQuestions;
