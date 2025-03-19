@@ -115,7 +115,7 @@ const Qna = ({ onComplete }) => {
           <p>{question.question}</p>
         </div>
 
-        <div className="flex flex-wrap justify-center  gap-[31px] mt-[58px]">
+        <div className="flex flex-wrap justify-center gap-2.5 sm:justify-center sm:bg-pink-400 md:justify-center md:bg-blue-500 sm:gap-[31px] md:gap-1/20 mt-[58px] bg-amber-400">
           {question?.options?.map((option, index) => (
             <Qnabox
               key={option}

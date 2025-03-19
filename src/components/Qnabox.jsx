@@ -5,7 +5,7 @@ const Qnabox = ({ onClickHandler,sno, data, bg, setBg }) => {
   }
   return (
     <div
-      className={`w-2/5 aspect-[3/2] p-0.5 md:w-[328px] md:h-[220px] text-xs rounded-xl md:text-xl font-semibold flex items-center justify-center ${
+      className={`w-[calc(50%-5px)] text-center whitespace-normal aspect-[3/2] md:w-[328px] md:h-[220px] text-xs rounded-[20px] sm:text-xl font-semibold flex items-center justify-center ${
         bg === sno ? "bg-[#606C38] text-white" : "bg-white text-black"
       }`}
       onClick={() => handleclick(sno)}

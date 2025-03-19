@@ -4,39 +4,18 @@ import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import clientImage from "../assets/clientImage.png";
 
-const testimonials = [
-  {
-    text: "“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.”",
-    image: clientImage,
-    name: "Client Name",
-  },
-  {
-    text: "“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.”",
-    image: clientImage,
-    name: "Client Name",
-  },
-  {
-    text: "“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.”",
-    image: clientImage,
-    name: "Client Name",
-  },
-];
+const testimonials = Array(3).fill({
+  text: "“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.”",
+  image: clientImage,
+  name: "Client Name",
+});
 
-const CustomPrevArrow = ({ onClick }) => (
+const ArrowButton = ({ onClick, direction }) => (
   <button
-    className="absolute -top-16 left-4 md:left-6 text-gray-300 hover:text-white"
+    className={`absolute -top-15 ${direction === "left" ? "left-6" : "right-6"} z-10 text-gray-400 hover:text-white`}
     onClick={onClick}
   >
-    <ChevronLeft size={36} />
-  </button>
-);
-
-const CustomNextArrow = ({ onClick }) => (
-  <button
-    className="absolute -top-16 right-4 md:right-6 text-gray-300 hover:text-white"
-    onClick={onClick}
-  >
-    <ChevronRight size={36} />
+    {direction === "left" ? <ChevronLeft size={42} /> : <ChevronRight size={42} />}
   </button>
 );
 
@@ -49,24 +28,22 @@ const Reviews = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    nextArrow: <ArrowButton direction="right" />,
+    prevArrow: <ArrowButton direction="left" />,
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto relative flex justify-center items-center text-[#a8a8a8] py-16 px-6 bg-[url('/reviewBg.jpg')] bg-cover bg-center">
-      <div className="absolute inset-0 bg-[#283618]/90"></div>
-      <Slider {...settings} className="w-full max-w-4xl px-4 relative z-10">
+    <div className="max-w-[1280px] mx-auto min-h-[500px] relative flex justify-center items-center text-[#a8a8a8] py-16 bg-[url('/reviewBg.jpg')]">
+      <div className="absolute inset-0 bg-[#283618]/94"></div>
+      <Slider {...settings} className="w-full max-w-6xl px-8">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <p className="italic text-lg md:text-2xl text-center max-w-2xl">{testimonial.text}</p>
-            <div className="flex flex-col items-center mt-6">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="w-24 h-24 md:w-40 md:h-40 rounded-full shadow-lg"
-              />
-              <p className="mt-2 font-medium text-xl md:text-2xl">{testimonial.name}</p>
+          <div key={index} className="flex flex-col items-center ">
+            <div className="flex flex-col-reverse lg:flex-row justify-evenly items-center">
+              <p className="italic max-w-3xl text-sm text-center lg:text-left lg:text-2xl">{testimonial.text}</p>
+              <div className="flex flex-col items-center lg:w-1/4 m-[12px] ">
+                <img src={testimonial.image} alt={testimonial.name} className="w-40 h-40 rounded-full shadow-lg" />
+                <p className="mt-2 font-medium text-sm md:text-2xl">{testimonial.name}</p>
+              </div>
             </div>
           </div>
         ))}
