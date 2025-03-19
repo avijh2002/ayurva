@@ -3,7 +3,14 @@
 Ayurva is a project dedicated to promoting holistic health and wellness through the principles of Ayurveda. This repository contains resources, tools, and information to help individuals embrace a balanced and healthy lifestyle.
 
 ## Features
-
+- **Holistic Pain Management**: A comprehensive solution for back pain and spondylitis, combining Yoga, Diet, and Alternative Medicine.
+- **Interactive Assessments**: A 2-minute at-home pain assessment to provide personalized recommendations.
+- **Expert Consultations**: Access to experienced Ayurveda, Homeopathy, and Naturopathy specialists.
+- **Tailored Diet Plans**: Ayurvedic diet plans to reduce inflammation and improve overall health.
+- **Yoga Therapy**: Guided yoga sessions designed to enhance flexibility and alleviate pain.
+- **Corporate Wellness**: Customized wellness plans for organizations to improve employee health and productivity.
+- **User-Friendly Interface**: Intuitive design for seamless navigation and usage.
+- **Progress Tracking**: Tools to monitor your health journey and improvements over time.
 - **Ayurvedic Knowledge**: Learn about the ancient science of Ayurveda and its principles.
 - **Personalized Wellness**: Tools to help you discover your dosha and create a personalized wellness plan.
 - **Recipes and Remedies**: A collection of Ayurvedic recipes and natural remedies.
