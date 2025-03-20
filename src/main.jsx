@@ -7,7 +7,7 @@ import Home from "./pages/Home.jsx";
 import AboutUs from "./pages/Aboutus";
 import Contactus from "./pages/Contactus.jsx";
 import Assessment from './pages/Assessment.jsx';
-import Result from './components/Result.jsx';
+import AdminDashboard from './pages/AdminDashboard.jsx';
 
 
 
@@ -34,6 +34,10 @@ function RoutesComponent() {
         <Route
           path="/assessment"
           element={<Assessment />}
+        />
+        <Route
+          path="/admin"
+          element={<AdminDashboard />}
         />
       </Route>
     )

@@ -28,7 +28,7 @@ const HeroSection = () => {
         </p>
         <div className="mt-6">
           <Buttonright
-            info="Book an Appointment"
+            info="Book Appointment"
             bgColor="bg-[#283618]"
             textColor="text-white"
             arrowBg="bg-[#F2EFE7]"

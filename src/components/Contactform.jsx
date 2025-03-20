@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
-import addUser from "../config/addUser";
+import addInquiries from "../config/addInquiries";
 
 const Contactform = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +12,7 @@ const Contactform = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     console.log(formData);
-    await addUser(formData);
+    await addInquiries(formData);
     setFormData({ name: "", email: "", subject: "" });
   };
 

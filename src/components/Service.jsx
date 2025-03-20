@@ -31,7 +31,7 @@ const Service = () => {
             />
             <div className="mt-10 w-fit mx-auto lg:w-auto">
               <Buttonright
-                info="Book Your Yoga Session"
+                info="Book Yoga Session"
                 bgColor="bg-[#283618]"
                 textColor="text-white"
                 arrowBg="bg-[#F2EFE7]"
@@ -58,7 +58,7 @@ const Service = () => {
             />
             <div className="mt-10 w-fit mx-auto lg:w-auto">
               <Buttonright
-                info="Get Your Diet Plan"
+                info="Get Diet Plan"
                 bgColor="bg-[#283618]"
                 textColor="text-white"
                 arrowBg="bg-[#F2EFE7]"

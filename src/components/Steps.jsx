@@ -29,19 +29,19 @@ const Steps = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-10">
-      <h2 className="text-center text-2xl font-semibold mb-8">
-        It is a 3-Step Solution
+    <div className="max-w-[1280px] mx-auto p-4 md:p-10  my-[60px] md:my-[170px] ">
+      <h2 className="text-center text-[22px] md:text-[40px] font-semibold mb-[40px] md:mb-[134px] ">
+        It is a 3 step Solution
       </h2>
 
-      <div className="flex  gap-6 md:items-start">
+      <div className="flex justify-evenly items-center ">
         {/* Left Steps Navigation */}
-        <div className="w-full md:w-1/3 flex flex-col space-y-4">
+        <div className=" w-1/3 h-1/3 flex flex-col justify-center ">
           {stepsData.map((item, index) => (
             <p
               key={index}
-              className={`cursor-pointer text-lg transition-all duration-300 ease-in-out ${
-                activeStep === index ? "font-bold text-black" : "font-normal text-gray-500"
+              className={`cursor-pointer py-5 text-[16px]  md:text-[32px] text-center  ${
+                activeStep === index ? "font-bold" : "font-light"
               }`}
               onClick={() => setActiveStep(index)}
             >
@@ -51,16 +51,16 @@ const Steps = () => {
         </div>
 
         {/* Right Step Content */}
-        <div className="w-full md:w-2/3 border-l border-gray-300 pl-10 min-h-full">
-          <h3 className="text-xl font-semibold mb-2">
+        <div className="w-1/2 md:border-l border-gray-300 py-5 md:pl-[115px] ">
+          <h3 className="text-[20px] md:text-[32px] font-medium leading-none md:w-2/3 mb-[18px]">
             {stepsData[activeStep].title}
           </h3>
-          <p className="text-gray-600 text-base mb-6">
+          <p className="text-gray-500 mt-2 text-lg md:text-xl mb-[40px] md:mb-[56px]">
             {stepsData[activeStep].description}
           </p>
 
           {/* Button */}
-          <div className="mt-4">
+          <div className="mt-6 md:mt-10 w-4/5">
             <Buttonright
               info={stepsData[activeStep].buttonText}
               bgColor="bg-[#283618]"

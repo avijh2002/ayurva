@@ -36,7 +36,7 @@ const Faq = () => {
             <div
               key={index}
               onClick={() => setSelectedQuestion(faq)}
-              className={`cursor-pointer border-b  ${
+              className={`cursor-pointer border  ${
                 selectedQuestion.question === faq.question
                   ? "text-black font-semibold"
                   : "text-gray-400"

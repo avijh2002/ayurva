@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi"; // Import icons for the menu
 import myImage from "../assets/logo.png";
+import BookNowButton from "./BookNowButton";
 
 const Navbar = () => {
   const location = useLocation();
@@ -38,14 +39,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between max-w-[1280px] mx-auto px-6 py-4 border-b border-gray-300">
+    <nav className="flex items-center justify-between max-w-[1280px] mx-auto px-4 py-4 border-b border-gray-300">
       {/* Logo */}
       <div className="w-full md:w-1/5 ">
         <img className="w-auto md:w-full inset-0  " src={myImage} alt="Logo" />
       </div>
 
       {/* Hamburger Menu Button (Mobile) */}
-      <div className="md:hidden">
+      <div className="md:hidden ">
         {menuOpen ? (
           <FiX size={32} className="text-[#283618]" onClick={() => setMenuOpen(false)} />
         ) : (
@@ -55,14 +56,14 @@ const Navbar = () => {
 
       {/* Navigation Links (Desktop & Mobile) */}
       <div
-        className={`absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none 
-        flex flex-col md:flex-row gap-4 text-[#626262] text-xl items-center p-6 md:p-0 transition-all duration-300 
+        className={`absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent   shadow-md md:shadow-none 
+        flex flex-col md:flex-row  text-[#626262] text-xl items-center p-6 md:p-0 sm:gap-0 md:gap-1 transition-all duration-300 
         ${menuOpen ? "block" : "hidden md:flex"}`}
       >
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `px-6 py-2 transition-all duration-150 cursor-pointer 
+            `px-4 py-1 transition-all duration-150 cursor-pointer 
             hover:bg-[#283618] hover:text-white hover:rounded-full ${
               isActive ? "bg-[#283618] text-white rounded-full" : ""
             }`
@@ -74,7 +75,7 @@ const Navbar = () => {
 
         <button
           onClick={() => handleClick("services")}
-          className="px-6 py-2 transition-all duration-150 cursor-pointer 
+          className="px-4 py-1 transition-all duration-150 cursor-pointer 
           hover:bg-[#283618] hover:text-white hover:rounded-full"
         >
           Services
@@ -82,7 +83,7 @@ const Navbar = () => {
 
         <button
           onClick={() => handleClick("faq")}
-          className="px-6 py-2 transition-all duration-150 cursor-pointer 
+          className="px-4 py-1 transition-all duration-150 cursor-pointer 
           hover:bg-[#283618] hover:text-white hover:rounded-full"
         >
           FAQ
@@ -91,7 +92,7 @@ const Navbar = () => {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            `px-6 py-2 transition-all duration-150 cursor-pointer 
+            `px-4 py-1 transition-all duration-150 cursor-pointer 
             hover:bg-[#283618] hover:text-white hover:rounded-full ${
               isActive ? "bg-[#283618] text-white rounded-full" : ""
             }`
@@ -104,7 +105,7 @@ const Navbar = () => {
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            `px-6 py-2 transition-all duration-150 cursor-pointer 
+            `px-4 py-1 transition-all duration-150 cursor-pointer 
             hover:bg-[#283618] hover:text-white hover:rounded-full ${
               isActive ? "bg-[#283618] text-white rounded-full" : ""
             }`
@@ -114,6 +115,8 @@ const Navbar = () => {
           Contact
         </NavLink>
       </div>
+
+      <BookNowButton/>
     </nav>
   );
 };
