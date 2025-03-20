@@ -19,7 +19,6 @@ export async function getInquiries() {
       id: doc.id,
       ...doc.data(),
     }));
-    console.log("Fetched Inquiries:", inquiries);
     return inquiries;
   } catch (error) {
     console.error("Error fetching inquiries:", error);

@@ -16,7 +16,6 @@ export const updateResponse = async (docId, data) => {
   try {
     const docRef = doc(db, "responses", docId);
     await updateDoc(docRef, data);
-    console.log("Document updated with ID:", docId);
   } catch (error) {
     console.error("Error updating document:", error);
     throw error;
@@ -30,7 +29,6 @@ export const getResponses = async () => {
       id: doc.id,
       ...doc.data(),
     }));
-    console.log("Fetched Responses:", responses);
     return responses;
   } catch (error) {
     console.error("Error fetching documents:", error);
