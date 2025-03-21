@@ -20,7 +20,7 @@ const Home = () => {
       {/* <Specialists /> */}
       <div className="mx-auto max-w-[1280px] h-[#151px] py-16 bg-[url('/bells.jpg')] bg-cover bg-center opacity-7"></div>
       <WhyAyurva />
-      {/* <Reviews /> */}
+      <Reviews />
       <Steps/>
       <Service />
       {/* <Faq/> */}

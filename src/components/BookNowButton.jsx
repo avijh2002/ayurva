@@ -11,7 +11,7 @@ const BookNowButton = () => {
   return (
     <button
       onClick={onClick}
-      className="hidden md:flex items-center justify-between w-[180px] h-[50px] border-2  border-[#283618] rounded-full px-4 "
+      className="hidden lg:flex items-center justify-between w-[180px] h-[50px] border-2  border-[#283618] rounded-full px-4 "
     >
       <span className="text-[#283618] font-medium text-[15px] text-center mx-auto ">Book Now</span>
       <div className="w-[40px] h-[40px] bg-[#283618] rounded-full flex items-center justify-center -mr-[12px]">

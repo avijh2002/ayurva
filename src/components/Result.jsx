@@ -10,19 +10,21 @@ const EmailInput = ({ onEmailSubmit }) => {
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return emailRegex.test(email.trim());
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
-    if (!validateEmail(email)) {
+    const trimmedEmail = email.trim();
+
+    if (!validateEmail(trimmedEmail)) {
       toast.error("Please enter a valid email address.");
       return;
     }
 
-    onEmailSubmit(email);
+    onEmailSubmit(trimmedEmail);
   };
 
   return (
@@ -74,24 +76,33 @@ const Result = ({
 
   const validateMobile = (mobile) => {
     const mobileRegex = /^[6-9]\d{9}$/;
-    return mobile && mobileRegex.test(String(mobile).trim());
+    return mobileRegex.test(mobile);
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    if (!validateMobile(mobile)) {
-      toast.error("Please enter a valid mobile number.");
+    const trimmedMobile = mobile.trim();
+
+    if (!trimmedMobile) {
+      toast.error("Mobile number cannot be empty.");
       return;
     }
-    await handleMobileSubmit(mobile);
+
+    if (!validateMobile(trimmedMobile)) {
+      toast.error(
+        "Please enter a valid mobile number starting with 6-9 and 10 digits long."
+      );
+      return;
+    }
+
+    await handleMobileSubmit(trimmedMobile);
     toast.success("Mobile number submitted successfully!");
     handleHome();
   };
-  
 
   return (
-    <div className="max-w-[1280px] mx-auto flex flex-col h-auto pt-[41px] px-4 md:px-0">
-      <div className="w-full md:mx-[49px] h-auto rounded-xl bg-[#283618] flex-col items-center justify-center p-6 md:p-8 pb-[75px] mb-[55px]">
+    <div className="max-w-[1280px]  mx-auto flex flex-col h-auto pt-[41px] px-4 md:px-[49px]">
+      <div className="w-full mx-auto h-auto rounded-xl bg-[#283618] flex-col items-center justify-center p-6 md:p-8 pb-[75px] mb-[55px]">
         <div className="flex items-center mb-[30px]">
           <button
             onClick={reset}

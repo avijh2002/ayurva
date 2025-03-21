@@ -41,12 +41,12 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between max-w-[1280px] mx-auto px-4 py-4 border-b border-gray-300">
       {/* Logo */}
-      <div className="w-full md:w-1/5 ">
-        <img className="w-auto md:w-full inset-0  " src={myImage} alt="Logo" />
+      <div className="w-full lg:w-1/5 ">
+        <img className="w-auto lg:w-full inset-0  " src={myImage} alt="Logo" />
       </div>
 
       {/* Hamburger Menu Button (Mobile) */}
-      <div className="md:hidden ">
+      <div className="lg:hidden ">
         {menuOpen ? (
           <FiX size={32} className="text-[#283618]" onClick={() => setMenuOpen(false)} />
         ) : (
@@ -56,9 +56,9 @@ const Navbar = () => {
 
       {/* Navigation Links (Desktop & Mobile) */}
       <div
-        className={`absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent   shadow-md md:shadow-none 
-        flex flex-col md:flex-row  text-[#626262] text-xl items-center p-6 md:p-0 sm:gap-0 md:gap-1 transition-all duration-300 
-        ${menuOpen ? "block" : "hidden md:flex"}`}
+        className={`absolute lg:static top-20 left-0 w-full lg:w-auto bg-white lg:bg-transparent   shadow-lg lg:shadow-none 
+        flex flex-col lg:flex-row  text-[#626262] text-xl items-center p-6 lg:p-0 sm:gap-0 lg:gap-1 transition-all duration-300 
+        ${menuOpen ? "block" : "hidden lg:flex"}`}
       >
         <NavLink
           to="/"

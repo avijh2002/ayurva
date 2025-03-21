@@ -29,8 +29,8 @@ const Steps = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <div className="max-w-[1280px] mx-auto p-4 md:p-10  my-[60px] md:my-[170px] ">
-      <h2 className="text-center text-[22px] md:text-[40px] font-semibold mb-[40px] md:mb-[134px] ">
+    <div className="max-w-[1280px] mx-auto p-4 md:p-10  my-[30px] md:my-[120px] ">
+      <h2 className="text-center text-[22px] md:text-[40px] font-semibold mb-[40px] md:mb-[100px] ">
         It is a 3 step Solution
       </h2>
 
@@ -51,7 +51,7 @@ const Steps = () => {
         </div>
 
         {/* Right Step Content */}
-        <div className="w-1/2 md:border-l border-gray-300 py-5 md:pl-[115px] ">
+        <div className="w-1/2 md:border-l border-gray-300 py-5 md:pl-[100px]  ">
           <h3 className="text-[20px] md:text-[32px] font-medium leading-none md:w-2/3 mb-[18px]">
             {stepsData[activeStep].title}
           </h3>
