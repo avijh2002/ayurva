@@ -27,17 +27,17 @@ const Footer = () => {
           />
           <div className="  absolute inset-0 bg-opacity-30  flex justify-between items-end text-center p-6 m-4 md:mr-12">
             <div className="hidden md:flex flex-col">
-              <h2 className="text-white text-3xl md:text-3xl font-semibold text-left">
+              <h2 className="text-white text-2xl md:text-xl lg:text-3xl  font-semibold text-left">
                 Take the First Step Toward a Pain-Free Life!
               </h2>
-              <p className="text-gray-200 text-xl mt-2 text-left">
+              <p className="text-gray-200 text-lg md:text-xs lg:text-xl mt-2 text-left">
                 Natural and Safe | Holistic Approach | Expert Guidance |
                 Personalized Plans
               </p>
             </div>
 
             <div className="relative top-6 md:static">
-              {" "}
+              {"   "}
               <Buttonright
                 info="Take a 2 minute Test"
                 bgColor="bg-[#283618]"
