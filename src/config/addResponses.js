@@ -1,5 +1,5 @@
 import { db } from "./firebase";
-import { collection, addDoc, doc, updateDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, doc, updateDoc, getDocs, deleteDoc } from "firebase/firestore";
 
 export const addResponses = async (data) => {
   try {
@@ -34,3 +34,14 @@ export const getResponses = async () => {
     throw error;
   }
 };
+
+
+
+export async function deleteResponse(id) {
+  try {
+    await deleteDoc(doc(db, "responses", id));
+  } catch (error) {
+    console.error("Error deleting response:", error);
+    throw error;
+  }
+}

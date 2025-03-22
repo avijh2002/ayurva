@@ -1,4 +1,4 @@
-import React from "react";
+import {useEffect} from "react";
 import Footer2 from "../components/Footer2";
 
 
@@ -7,6 +7,9 @@ import Team from "../components/Team";
 import About from "../components/About";
 
 const AboutUs = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div className="mx-auto max-w-full">
       {/* Mission Section */}

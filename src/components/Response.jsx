@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getResponses } from "../config/addResponses";
+import { getResponses, deleteResponse } from "../config/addResponses"; // Import functions
 
 const Responses = () => {
   const [responses, setResponses] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch responses using your existing getResponses function
+  // Fetch Responses
   const fetchResponses = async () => {
     try {
       const data = await getResponses();
@@ -20,6 +20,20 @@ const Responses = () => {
   useEffect(() => {
     fetchResponses();
   }, []);
+
+  // Handle Delete
+  const handleDelete = async (id) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this response?");
+    if (confirmDelete) {
+      try {
+        await deleteResponse(id);
+        alert("Response deleted successfully!");
+        fetchResponses(); // Refresh responses
+      } catch (error) {
+        console.error("Error deleting response:", error);
+      }
+    }
+  };
 
   return (
     <div className="p-4">
@@ -36,6 +50,14 @@ const Responses = () => {
             <p><strong>Mobile:</strong> {response.mobile || "N/A"}</p>
             <p><strong>Result:</strong> {response.result || "Pending"}</p>
             
+            {/* Delete Button */}
+            <button
+              onClick={() => handleDelete(response.id)}
+              className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 mt-4"
+            >
+              Delete
+            </button>
+
             <h4 className="mt-4 font-semibold">Questions and Responses:</h4>
             {response.responses && response.responses.length > 0 ? (
               <table className="w-full border-collapse border border-gray-300 mt-2">

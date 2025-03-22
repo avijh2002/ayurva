@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getInquiries } from "../config/addInquiries"; // Import your function
+import { getInquiries, deleteInquiry } from "../config/addInquiries"; // Import functions
 
 const Inquiries = () => {
   const [inquiries, setInquiries] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch data using your function
+ 
   const fetchInquiries = async () => {
     try {
       const data = await getInquiries();
@@ -21,6 +21,19 @@ const Inquiries = () => {
     fetchInquiries();
   }, []);
 
+  const handleDelete = async (id) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this inquiry?");
+    if (confirmDelete) {
+      try {
+        await deleteInquiry(id);
+        alert("Inquiry deleted successfully!");
+        fetchInquiries(); 
+      } catch (error) {
+        console.error("Error deleting inquiry:", error);
+      }
+    }
+  };
+
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold mb-4">Inquiries</h2>
@@ -35,6 +48,7 @@ const Inquiries = () => {
               <th className="border border-gray-300 p-2">Name</th>
               <th className="border border-gray-300 p-2">Email</th>
               <th className="border border-gray-300 p-2">Subject</th>
+              <th className="border border-gray-300 p-2">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -43,6 +57,14 @@ const Inquiries = () => {
                 <td className="border border-gray-300 p-2">{inquiry.name}</td>
                 <td className="border border-gray-300 p-2">{inquiry.email}</td>
                 <td className="border border-gray-300 p-2">{inquiry.subject}</td>
+                <td className="border border-gray-300 p-2">
+                  <button
+                    onClick={() => handleDelete(inquiry.id)}
+                    className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600"
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

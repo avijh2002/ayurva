@@ -8,6 +8,7 @@ import AboutUs from "./pages/Aboutus";
 import Contactus from "./pages/Contactus.jsx";
 import Assessment from './pages/Assessment.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
+import AuthGuard from './components/AuthGuard.jsx';
 
 
 
@@ -37,7 +38,11 @@ function RoutesComponent() {
         />
         <Route
           path="/admin"
-          element={<AdminDashboard />}
+          element={
+            <AuthGuard>
+              <AdminDashboard />
+            </AuthGuard>
+          }
         />
       </Route>
     )
