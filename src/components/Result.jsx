@@ -101,7 +101,7 @@ const Result = ({
   };
 
   return (
-    <div className="max-w-[1280px]  mx-auto flex flex-col h-auto pt-[41px] px-4 md:px-[49px]">
+    <div className="max-w-full  mx-auto flex flex-col h-auto pt-[41px] px-4 md:px-[49px]">
       <div className="w-full mx-auto h-auto rounded-xl bg-[#283618] flex-col items-center justify-center p-6 md:p-8 pb-[75px] mb-[55px]">
         <div className="flex items-center mb-[30px]">
           <button

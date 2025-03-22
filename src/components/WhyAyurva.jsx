@@ -6,7 +6,7 @@ import Stethoscope from "../assets/Stethoscope.png";
 
 const WhyAyurva = () => {
   return (
-    <section className=" max-w-[1280px] mx-auto px-10 pt-[35px] md:pt-[78px] text-center">
+    <section className=" max-w-full mx-auto px-10 pt-[35px] md:pt-[78px] text-center">
       {/* Heading */}
       <h2 className="text-[22px] md:text-[40px]  mb-[29px] font-semibold text-black  md:mb-[71px]">Why Choose Ayurva?</h2>
 

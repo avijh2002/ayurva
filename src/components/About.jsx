@@ -2,22 +2,22 @@ import picklogo from "../assets/picklogo.png";
 
 const About = () => {
   return (
-    <div className="max-w-[1280px] mx-auto p-3 flex flex-col md:flex-row items-center justify-center  text-center md:text-left py-10 px-6 md:px-1/20">
+    <div className="max-w-full mx-auto p-3 flex flex-col lg:flex-row  items-center justify-center  text-center lg:text-left py-10 px-6 lg:px-1/20">
       {/* Logo Section */}
-      <div className="w-2/3 md:w-[491px] md:h-[491px]  flex justify-center">
+      <div className="w-2/3 lg:w-[491px] lg:h-[491px]  flex justify-center">
         <img
           src={picklogo}
           alt="Ayurva Logo"
-          className=" md:h-full"
+          className=" lg:h-full"
         />
       </div>
 
       {/* Text Content Section */}
-      <div className="w-full p-10 md:w-1/2 ">
-        <h2 className="text-2xl mb-[23px] sm:text-4xl md:text-5xl font-semibold">
+      <div className="  px-10 lg:w-2/5 ">
+        <h2 className="text-2xl mb-[23px] sm:text-4xl lg:text-5xl font-semibold">
           About Ayurva
         </h2>
-        <p className="mt-3 text-sm sm:text-lg md:text-2xl text-gray-600">
+        <p className="mt-3 text-sm sm:text-lg lg:text-[26px] text-[#8c8c8c]">
           At Ayurva, we're passionate about empowering individuals to overcome
           back pain and spondylitis naturally. Our journey began with a deep
           understanding of the limitations of conventional pain management,

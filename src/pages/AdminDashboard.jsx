@@ -6,7 +6,7 @@ const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('responses');
 
   return (
-    <div className="max-w-[1280px] mx-auto min-h-screen bg-gray-100">
+    <div className="max-w-full mx-auto min-h-screen bg-gray-100">
       <div className="p-4 bg-white shadow-md">
         <h1 className="text-2xl font-bold">Welcome To Admin Dashboard</h1>
         <div className="mt-4">

@@ -73,7 +73,7 @@ const Qna = ({ onComplete }) => {
     );
 
   return (
-    <div className="max-w-[1280px] mx-auto flex flex-col h-auto pt-[41px]">
+    <div className="max-w-full mx-auto flex flex-col h-auto pt-[41px]">
       <div className="w-auto flex flex-col gap-2 justify-between items-center text-center mb-[27px] mx-4 lg:mx-[42px]">
         <p className="text-[28px] lg:text-[40px] text-black font-medium mb-[22px]">
           2-Minute At-Home Pain Assessment

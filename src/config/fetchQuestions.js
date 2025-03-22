@@ -7,7 +7,6 @@ export const fetchQuestions = async (questionID) => {
   try {
     const questionDoc = await getDoc(doc(db, "questions", questionID));
     if (questionDoc.exists()) {
-        console.log(questionDoc.data());
       return questionDoc.data();
     } else {
       return null; 

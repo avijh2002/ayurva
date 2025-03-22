@@ -1,12 +1,30 @@
-import React from "react";
+import {useState,useEffect} from "react";
 import myImage from "../assets/logo.png";
 import footerBanner from "../assets/footerBanner.png";
 import Buttonright from "./Buttonright";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link,useLocation,useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const [scrollTarget, setScrollTarget] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  const handleClick = (name) => {
+      scrollToElement(name);
+  };
+
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.warn(`Element with id '${id}' not found`);
+    }
+  };
   return (
-    <footer className=" max-w-[1280px] flex-col mx-auto py-17 px-7 md:px-26 md:py-22  bg-[#283618]">
+    <footer className=" max-w-full flex-col mx-auto py-17 px-7 md:px-26 md:py-22  bg-[#283618]">
       {/* Banner Section */}
       <div className="w-full h-fit flex-col  mx-auto">
         <div className="flex md:hidden flex-col">
@@ -59,15 +77,44 @@ const Footer = () => {
               Explore
             </h3>
             <ul className="text-sm mt-4 md:text-2xl space-y-2">
-              {["Home", "About Us", "Services", "Contact", "Log In"].map(
-                (item, index) => (
-                  <li key={index}>
-                    <a href="#" className="hover:text-white transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              <li>
+                <Link to="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleClick("services")}
+                  className="hover:text-white transition-colors"
+                >
+                  Services
+                </button>
+              </li>
+
+              <li>
+                <button
+                  onClick={() => handleClick("faq")}
+                  className="hover:text-white transition-colors"
+                >
+                  FAQ
+                </button>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -76,7 +123,9 @@ const Footer = () => {
             <h3 className="text-2xl md:text-3xl font-semibold text-white">
               Contact
             </h3>
-            <p className="text-sm mt-4 md:text-2xl space-y-2">care@ayurva.digital</p>
+            <p className="text-sm mt-4 md:text-2xl space-y-2">
+              care@ayurva.digital
+            </p>
             <p className="text-sm mt-4 md:text-2xl space-y-2">+91 8007968715</p>
             <div className="hidden md:flex justify-between w-2/3 text-white  text-xl mt-20">
               <a href="#" className="hover:text-gray-400">
@@ -116,8 +165,8 @@ const Footer = () => {
         </div>
 
         <div className="w-full md:hidden  flex-col-reverse items-center">
-            <img className="w-full" src={myImage} alt="Image" />
-          </div>
+          <img className="w-full" src={myImage} alt="Image" />
+        </div>
       </div>
     </footer>
   );

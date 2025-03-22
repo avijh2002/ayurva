@@ -17,7 +17,7 @@ const Contactform = () => {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row gap-6 bg-[#283618] mt-10 rounded-3xl p-6 md:p-10">
+    <div className="max-w-full mx-auto flex flex-col md:flex-row gap-6 bg-[#283618] mt-10 rounded-3xl p-6 md:p-10">
       {/* Left - Form Section */}
       <div className="w-full md:w-1/2 flex items-center justify-center">
         <div className="bg-white w-full rounded-xl p-6 shadow-lg">

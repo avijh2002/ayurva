@@ -33,7 +33,7 @@ const Reviews = () => {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto min-h-[500px] relative flex justify-center items-center text-[#a8a8a8] py-16 bg-[url('/reviewBg.jpg')]">
+    <div className="max-w-full mx-auto min-h-[500px] relative flex justify-center items-center text-[#a8a8a8] py-16 bg-[url('/reviewBg.jpg')]">
       <div className="absolute inset-0 bg-[#283618]/94"></div>
       <Slider {...settings} className="w-full max-w-6xl px-8">
         {testimonials.map((testimonial, index) => (

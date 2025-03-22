@@ -9,7 +9,7 @@ import service2 from "../assets/Ellipse 8.png";
 
 const Service = () => {
   return (
-    <section className="max-w-[1280px] mx-auto px-[26px] md:px-[50px] mb-[40px] ">
+    <section className="max-w-full mx-auto px-[26px] md:px-[50px] mb-[40px] ">
       <div
         id="services"
         className="bg-[#f2f2f2] flex-col items-center space-y-4 p-11 rounded-lg"

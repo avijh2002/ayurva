@@ -8,7 +8,7 @@ import About from "../components/About";
 
 const AboutUs = () => {
   return (
-    <div className="mx-auto max-w-[1280px]">
+    <div className="mx-auto max-w-full">
       {/* Mission Section */}
       <About/>
       <Mission />

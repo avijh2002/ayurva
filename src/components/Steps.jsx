@@ -29,7 +29,7 @@ const Steps = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <div className="max-w-[1280px] mx-auto p-4 md:p-10  my-[30px] md:my-[120px] ">
+    <div className="max-w-full mx-auto p-4 md:p-10  my-[30px] md:my-[120px] ">
       <h2 className="text-center text-[22px] md:text-[40px] font-semibold mb-[40px] md:mb-[100px] ">
         It is a 3 step Solution
       </h2>

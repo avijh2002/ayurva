@@ -67,7 +67,7 @@ const Team = () => {
     };
 
   return (
-    <div className="max-w-[1280px] mx-auto h-auto pt-[104px] bg-[#F3F3F3]">
+    <div className="max-w-full mx-auto h-auto pt-[104px] bg-[#F3F3F3]">
       <div className="text-[40px] font-medium text-center mb-[56px]">
         Meet our Team
       </div>

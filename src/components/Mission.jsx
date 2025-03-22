@@ -5,7 +5,7 @@ import Buttonleft from "./Buttonleft";
 
 const Mission = () => {
   return (
-    <div className="max-w-[1280px] mx-auto bg-[#283618] text-white py-16 px-6 text-center flex flex-col md:flex-row-reverse md:items-center  md:justify-between gap-10 sm:py-40 sm:px-28">
+    <div className="max-w-full mx-auto bg-[#283618] text-white py-16 px-6 text-center flex flex-col md:flex-row-reverse md:items-center  md:justify-between gap-10 sm:py-40 sm:px-28">
       {/* Right Image (Stacked Below on Small Screens) */}
       <div className="w-full  md:w-1/2 flex justify-center rounded-4xl">
         <img

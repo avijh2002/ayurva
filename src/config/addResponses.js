@@ -4,7 +4,6 @@ import { collection, addDoc, doc, updateDoc, getDocs } from "firebase/firestore"
 export const addResponses = async (data) => {
   try {
     const docRef = await addDoc(collection(db, "responses"), data);
-    console.log("Document written with ID:", docRef.id);
     return docRef.id; 
   } catch (error) {
     console.error("Error adding document:", error);

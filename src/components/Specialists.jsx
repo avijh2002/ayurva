@@ -3,7 +3,7 @@ import cardImage from "../assets/cardImage.png";
 
 const Specialists = () => {
   return (
-    <div className="mx-auto max-w-[1280px] flex flex-col items-center mb-16 ">
+    <div className="mx-auto max-w-full flex flex-col items-center mb-16 ">
       {/* Title */}
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-center mt-10 md:mt-16 mb-8 md:mb-12">
         Meet the Specialists
