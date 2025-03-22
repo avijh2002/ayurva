@@ -2,6 +2,9 @@
 
 Ayurva is a project dedicated to promoting holistic health and wellness through the principles of Ayurveda. This repository contains resources, tools, and information to help individuals embrace a balanced and healthy lifestyle.
 
+Check out the live version of Ayurva here:  
+[Ayurva - ](https://ayurva.digital)
+
 ## Features
 - **Holistic Pain Management**: A comprehensive solution for back pain and spondylitis, combining Yoga, Diet, and Alternative Medicine.
 - **Interactive Assessments**: A 2-minute at-home pain assessment to provide personalized recommendations.
