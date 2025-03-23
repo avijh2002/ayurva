@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between max-w-full mx-auto px-4 py-4 border-b border-gray-300">
       {/* Logo */}
-      <div className="w-full lg:w-1/5 ">
+      <div className="w-2/3 lg:w-1/5 ">
         <img className="w-auto lg:w-full inset-0  " src={myImage} alt="Logo" />
       </div>
 

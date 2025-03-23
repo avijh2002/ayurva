@@ -8,26 +8,26 @@ const SpecialistCard = ({ name, image, heading, info }) => {
   return (
     <div className="w-full">
       {/* Mobile View */}
-      <div className="lg:hidden h-[580px] w-[345px]  bg-[#F8F8F8] shadow-lg rounded-2xl p-6 flex flex-col items-center text-center border border-gray-200 mx-auto">
+      <div className="lg:hidden h-[700px] w-[345px]  bg-[#F8F8F8]  rounded-2xl p-6 flex flex-col items-center text-center border border-gray-200 mx-auto">
         <h3 className="text-2xl font-semibold mb-5">{name}</h3>
 
-        <div className="flex items-center gap-4 min-h-42  mb-6 ">
+        <div className="flex items-center gap-4 min-h-42  mb-[15px] ">
           <img
             src={image}
             alt={name}
-            className="h-full w-42  rounded-xl  "
+            className="h-3/4 w-42  rounded-xl  "
           />
 
-          <p className="w-1/2 text-xs text-[#5c5c5c] mb-4 text-left leading-none">
+          <p className="w-1/2 text-xs text-[#5c5c5c] mb-4 text-left ">
             {heading}
           </p>
         </div>
 
-        <p className="text-[11px] font-light mb-[33px] text-[#757575] leading-none ">{info}</p>
+        <p className="text-[12px] mb-[33px] text-[#757575]  ">{info}</p>
       </div>
 
       {/* Desktop View */}
-      <div className="hidden lg:flex flex-col mx-auto w-4/5 h-[580px] py-[36px] px-[45px] bg-[#F8F8F8] shadow-lg rounded-2xl p-8 border border-gray-200 ">
+      <div className="hidden lg:flex flex-col mx-auto w-4/5 h-[580px] py-[36px] px-[45px] bg-[#F8F8F8]  rounded-2xl p-8 border border-gray-200 ">
         <div className="flex  items-center h-1/2 ">
           <div className="w-[243px] h-full rounded-xl p-2 mr-8 ">
             <img src={image} alt={name} className="w-full h-full" />
@@ -35,7 +35,7 @@ const SpecialistCard = ({ name, image, heading, info }) => {
 
           <div className="flex flex-col w-3/4  leading-none">
             <h3 className="text-4xl font-medium mb-3">{name}</h3>
-            <p className="text-[#5c5c5c] font-medium mb-4 text-left text-2xl leading-none ">
+            <p className="text-[#5c5c5c] font-medium mb-4 text-left text-2xl  ">
               {heading}
             </p>
           </div>
