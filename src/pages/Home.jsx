@@ -28,7 +28,7 @@ const Home = () => {
     <div>
       <HeroSection />
       <Homeinfo />
-      {/* <Specialists /> */}
+      <Specialists />
       <div className="mx-auto max-w-full h-[#151px] py-16 bg-[url('/bells.jpg')] bg-cover bg-center opacity-7"></div>
       <WhyAyurva />
       <Reviews />

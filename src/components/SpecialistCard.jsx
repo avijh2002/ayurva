@@ -1,39 +1,51 @@
+import React from "react";
 import star from "../assets/star.png";
 
-const SpecialistCard = ({ image, rating, name, description, specialty }) => {
-  const intRating = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-  const opacity = parseInt((rating - intRating) * 100);
-
+const SpecialistCard = ({ name, image, heading, info }) => {
+  const midIndex = Math.ceil(info.length / 2);
+  const firstHalf = info.slice(0, midIndex);
+  const secondHalf = info.slice(midIndex);
   return (
-    <div className="max-w-[365px] w-full bg-[#F8F8F8] shadow-lg rounded-2xl p-6 flex flex-col items-center text-center border border-gray-200">
-      {/* Image */}
-      <img
-        src={image}
-        alt={name}
-        className="w-full aspect-[4/3] rounded-xl object-cover mb-6"
-      />
+    <div className="w-full">
+      {/* Mobile View */}
+      <div className="lg:hidden h-[580px] w-[345px]  bg-[#F8F8F8] shadow-lg rounded-2xl p-6 flex flex-col items-center text-center border border-gray-200 mx-auto">
+        <h3 className="text-2xl font-semibold mb-5">{name}</h3>
 
-      {/* Star Rating */}
-      <div className="flex justify-center gap-1 text-[#CABD00] mb-6">
-        {[...Array(intRating)].map((_, i) => (
-          <img key={i} src={star} alt="star" className="w-5 h-5" />
-        ))}
-        {hasHalfStar && (
-          <img src={star} alt="half-star" className="w-5 h-5 opacity-50" />
-        )}
+        <div className="flex items-center gap-4 min-h-42  mb-6 ">
+          <img
+            src={image}
+            alt={name}
+            className="h-full w-42  rounded-xl  "
+          />
+
+          <p className="w-1/2 text-xs text-[#5c5c5c] mb-4 text-left leading-none">
+            {heading}
+          </p>
+        </div>
+
+        <p className="text-[11px] font-light mb-[33px] text-[#757575] leading-none ">{info}</p>
       </div>
 
-      {/* Name */}
-      <h3 className="text-xl font-semibold text-black">{name}</h3>
+      {/* Desktop View */}
+      <div className="hidden lg:flex flex-col mx-auto w-4/5 h-[580px] py-[36px] px-[45px] bg-[#F8F8F8] shadow-lg rounded-2xl p-8 border border-gray-200 ">
+        <div className="flex  items-center h-1/2 ">
+          <div className="w-[243px] h-full rounded-xl p-2 mr-8 ">
+            <img src={image} alt={name} className="w-full h-full" />
+          </div>
 
-      {/* Description */}
-      <p className="text-sm text-[#757575] mt-4 mb-6">{description}</p>
+          <div className="flex flex-col w-3/4  leading-none">
+            <h3 className="text-4xl font-medium mb-3">{name}</h3>
+            <p className="text-[#5c5c5c] font-medium mb-4 text-left text-2xl leading-none ">
+              {heading}
+            </p>
+          </div>
+        </div>
 
-      {/* Specialty Button */}
-      <button className="text-lg px-6 py-2 border border-gray-400 rounded-full font-medium hover:bg-gray-100 transition">
-        {specialty}
-      </button>
+        <div className="grid grid-cols-2 gap-6 mt-8 ">
+          <p className="text-[#757575] text-[15px]">{firstHalf}</p>
+          <p className="text-[#757575] text-[15px]">{secondHalf}</p>
+        </div>
+      </div>
     </div>
   );
 };
