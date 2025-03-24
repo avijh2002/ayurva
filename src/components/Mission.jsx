@@ -21,7 +21,7 @@ const Mission = () => {
           <h2 className="text-2xl sm:text-5xl md:text-5xl  font-semibold text-white">
             Our Mission
           </h2>
-          <p className="mt-3 mb-9 text-sm sm:text-3xl md:text-[26px] md:mt-6 md:mb-18 md:leading-none">
+          <p className="mt-3 text-sm sm:text-lg lg:text-[26px] text-[#ffffff]  md:mt-6 md:mb-12 ">
             We believe in addressing the root cause of pain, not just masking
             the symptoms. Our approach leverages the power of Ayurveda,
             Homeopathy, and natural, side-effect-free solutions. We also guide

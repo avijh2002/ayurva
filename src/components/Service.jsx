@@ -14,7 +14,7 @@ const Service = () => {
         id="services"
         className="bg-[#f2f2f2] flex-col items-center space-y-4 p-11 rounded-lg"
       >
-        <div className="text-center p-3 lg:p-0 -mt-6 lg:mt-0 ">
+        <div className="text-center p-3 lg:p-0 mb-[40px]  lg:mt-0 ">
           <p className="text-[22px] lg:text-[40px] leading-[24px] font-medium text-black">
             Services Offered By Ayurva
           </p>

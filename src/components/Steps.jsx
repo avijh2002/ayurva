@@ -11,17 +11,17 @@ const stepsData = [
   },
   {
     step: "Step 2",
-    title: "Receive Your Personalized Plan",
+    title: "Discover Your Personalized Plan",
     description:
-      "Get a tailored recovery plan based on your answers and medical expertise.",
-    buttonText: "Next Step",
+      "Recieve a customised Yoga, Diet and alternative medicine plan tailored to your unique needs",
+    buttonText: "Get Started",
   },
   {
     step: "Step 3",
-    title: "Start Your Recovery Journey",
+    title: "Experience Relief and Track Your Progress",
     description:
-      "Begin your personalized recovery process with expert guidance.",
-    buttonText: "Finish",
+      "Follow our guided sessions, monitor your improvements, and enjoy a pain-free life.",
+    buttonText: "Get Started",
   },
 ];
 
@@ -34,9 +34,9 @@ const Steps = () => {
         It is a 3 step Solution
       </h2>
 
-      <div className="flex justify-evenly items-center ">
+      <div className="flex justify-evenly items-center 0 ">
         {/* Left Steps Navigation */}
-        <div className=" w-1/3 h-1/3 flex flex-col justify-center ">
+        <div className=" h-1/3 flex flex-col justify-center ">
           {stepsData.map((item, index) => (
             <p
               key={index}

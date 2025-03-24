@@ -1,5 +1,5 @@
 import { db } from "./firebase";
-import { collection, addDoc, doc, updateDoc, getDocs, deleteDoc } from "firebase/firestore";
+import { collection, addDoc, doc, updateDoc, getDocs, deleteDoc,query, orderBy } from "firebase/firestore";
 
 export const addResponses = async (data) => {
   try {
@@ -21,9 +21,11 @@ export const updateResponse = async (docId, data) => {
   }
 };
 
+
 export const getResponses = async () => {
   try {
-    const querySnapshot = await getDocs(collection(db, "responses"));
+    const q = query(collection(db, "responses"), orderBy("timestamp", "desc"));
+    const querySnapshot = await getDocs(q);
     const responses = querySnapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
@@ -34,6 +36,21 @@ export const getResponses = async () => {
     throw error;
   }
 };
+
+// export const getResponses = async () => {
+//   try {
+//     const querySnapshot = await getDocs(collection(db, "responses"));
+//     const responses = querySnapshot.docs.map((doc) => ({
+//       id: doc.id,
+//       ...doc.data(),
+//     }));
+//     return responses;
+//   } catch (error) {
+//     console.error("Error fetching documents:", error);
+//     throw error;
+//   }
+// };
+
 
 
 

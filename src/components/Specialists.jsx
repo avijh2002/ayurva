@@ -20,7 +20,7 @@ const specialistsData = [
     image: docpic2,
     name: "Dr. Subramanya Rao",
     heading:
-      "Dr. Subramanya Rao, a veteran Ayurvedic practitioner, boasts 34 years of rich experience. His dedication  extends beyond clinical practice to global outreach, promoting Ayurveda through lectures across Moscow, the  Netherlands, Europe, and Canada. ",
+      "Dr. Subramanya Rao, a veteran Ayurvedic practitioner, boasts 34 years of rich experience. His dedication has global outreach, promoting Ayurveda through lectures across Moscow, the  Netherlands, Europe, and Canada. ",
     info: "Dr. Rao's commitment to scientific validation is evident in his collaborative clinical trials on Panchakarma treatment conducted in Moscow with the Institute of Traditional Medicine. These trials underscore his efforts to bridge traditional wisdom with modern research. His extensive international engagement highlights his role as a key ambassador for Ayurveda, fostering its understanding and acceptance worldwide. Dr. Subramanya Rao, with 34 years of experience, is a renowned Ayurvedic practitioner and global ambassador, promoting Ayurveda through international lectures and pioneering clinical trials on Panchakarma in collaboration with the Institute of Traditional Medicine in Moscow.",
   },
   // {
@@ -36,7 +36,7 @@ const ArrowButton = ({ onClick, direction }) => (
   <button
     className={`absolute -top-15 ${
       direction === "left" ? "left-0" : "right-0"
-    } z-10 text-gray-400 hover:text-white`}
+    } z-10 text-gray-400 hover:text-gray-200`}
     onClick={onClick}
   >
     {direction === "left" ? (

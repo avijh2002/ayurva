@@ -8,17 +8,17 @@ const SpecialistCard = ({ name, image, heading, info }) => {
   return (
     <div className="w-full">
       {/* Mobile View */}
-      <div className="lg:hidden h-[700px] w-[345px]  bg-[#F8F8F8]  rounded-2xl p-6 flex flex-col items-center text-center border border-gray-200 mx-auto">
+      <div className="lg:hidden h-[700px] w-[345px]  bg-[#F8F8F8]  rounded-2xl p-6 flex flex-col items-center text-center  mx-auto">
         <h3 className="text-2xl font-semibold mb-5">{name}</h3>
 
-        <div className="flex items-center gap-4 min-h-42  mb-[15px] ">
+        <div className="flex items-center gap-4 min-h-42  mb-[12px] ">
           <img
             src={image}
             alt={name}
             className="h-3/4 w-42  rounded-xl  "
           />
 
-          <p className="w-1/2 text-xs text-[#5c5c5c] mb-4 text-left ">
+          <p className="w-1/2 text-xs font-semibold text-[#5c5c5c] mb-4 text-left ">
             {heading}
           </p>
         </div>

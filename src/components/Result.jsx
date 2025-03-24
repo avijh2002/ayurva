@@ -123,7 +123,7 @@ const Result = ({
               <p className="text-white">{result}</p>
             </div>
             <div className="flex flex-col-reverse items-center gap-2.5 sm:flex-row justify-center md:gap-[36px] rounded-[21px] mt-10 w-full">
-              <div className="max-w-[350px] mx-auto md:w-[515px] p-6 bg-white rounded-[21px]">
+              <div className="max-w-[350px]mx-auto md:w-[515px] p-6 bg-white rounded-[21px]">
                 <p className="text-center text-xs md:text-[24px] font-medium mb-6">
                   For Expert Consultation, enter your mobile number and one of
                   our team will get in touch

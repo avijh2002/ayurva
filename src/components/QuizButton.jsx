@@ -5,7 +5,7 @@ const QuizButton = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="px-2 w-2/3 sm:w-1/2 md:w-[253px] py-2 bg-white rounded-full flex items-center justify-between gap-4"
+      className="px-2 w-2/3 sm:w-1/3 md:w-[253px] py-2 bg-white rounded-full flex items-center justify-between gap-4"
     >
       <div className="flex items-center justify-center text-center mx-auto">
         <p className="text-[#283618] text-xs sm:text-base md:text-lg text-start font-semibold">

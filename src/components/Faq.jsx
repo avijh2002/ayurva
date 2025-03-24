@@ -114,14 +114,14 @@ const Faq = () => {
       id="faq"
       className="max-w-full mx-auto lg:py-15 lg:px-10 "
     >
-      {/* Heading */}
+      {/* Heading */} 
       <h2 className="w-auto mx-auto  lg:text-[40px] font-semibold text-black text-center mb-[20px] lg:mb-[113px]">
         Frequently Asked Questions
       </h2>
 
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row ">
         {/* Left: Questions List */}
-        <div className="w-auto lg:w-2/3 px-[27px] lg:px-[76px]  pb-[106px] border-r border-gray-300">
+        <div className="w-auto lg:w-2/3 px-[27px] lg:px-[76px]  pb-[106px]  border-gray-300">
           {faqData.map((faq, index) => (
             <div key={index}>
               {/* Question Section */}
@@ -184,7 +184,7 @@ const Faq = () => {
         </div>
 
 {/* Right: Answer Box */}
-<div className="hidden lg:block w-[393px] lg:w-1/3 h-auto bg-[#283618] font-light text-[#F2EFE7] text-[24px] px-[47px] py-[39px] rounded-[25px] ">
+<div className="hidden lg:block w-[393px] lg:w-1/3 h-[700px] bg-[#283618] font-light mt-[50px] text-[#F2EFE7] text-[24px] px-[47px] py-[39px] rounded-[25px] ">
           <p>{selectedQuestion? selectedQuestion?.answer.intro : nullText}</p>
 
           {selectedQuestion?.answer.points.length > 0 && (
