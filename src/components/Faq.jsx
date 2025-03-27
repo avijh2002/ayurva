@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ChevronRight, Plus, Minus } from "lucide-react";
 
-
 const faqData = [
   {
     question: "What is this platform about?",
@@ -98,8 +97,9 @@ const faqData = [
     },
   },
 ];
-const nullText="Here you'll find answers to the most common questions you may have on Ayurva. If you still can't find the answer you're looking for, just Contact us! "
-  
+const nullText =
+  "Here you'll find answers to the most common questions you may have on Ayurva. If you still can't find the answer you're looking for, just Contact us! ";
+
 const Faq = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
@@ -110,54 +110,52 @@ const Faq = () => {
   };
 
   return (
-    <section
-      id="faq"
-      className="max-w-full mx-auto lg:py-15 lg:px-10 "
-    >
-      {/* Heading */} 
-      <h2 className="w-auto mx-auto  lg:text-[40px] font-semibold text-black text-center mb-[20px] lg:mb-[113px]">
+    <section id="faq" className="max-w-full mx-auto md:py-15 md:px-10 ">
+      {/* Heading */}
+      <h2 className="w-auto mx-auto  md:text-[40px] font-semibold text-black text-center mb-[20px] md:mb-[53px]">
         Frequently Asked Questions
       </h2>
 
-      <div className="flex flex-col lg:flex-row ">
+      <div className="flex flex-col items-center mx-3 md:mx-0  ">
         {/* Left: Questions List */}
-        <div className="w-auto lg:w-2/3 px-[27px] lg:px-[76px]  pb-[106px]  border-gray-300">
+        <div className="w-auto lg:w-3/4 mx-6 md:mx-0     border-gray-300">
           {faqData.map((faq, index) => (
-            <div key={index}>
+            <div className=" w-full border-b-[0.5px] border-[#989898]  " key={index}>
               {/* Question Section */}
               <div
                 onClick={() => toggleQuestion(faq)}
-                className={`cursor-pointer my-2 p-4 rounded-lg transition-all duration-300 ${
+                className={`cursor-pointer my-2 py-4  rounded-md transition-all duration-300 ${
                   selectedQuestion?.question === faq.question
                     ? "text-black font-semibold"
                     : "text-gray-400"
                 } flex justify-between items-center`}
               >
-                <div className="w-[501px] text-[15px] lg:text-[28px] font-[400] leading-none">
-                  {faq.question}
+                <div className="w-full text-[15px] md:text-[20px] flex justify-between items-center font-[400] leading-none ">
+                  <p className="md:w-[525px] ">{faq.question}</p>
+
+                  <span className=" ">
+                  {selectedQuestion?.question === faq.question ? (
+                    <Minus size={32} />
+                  ) : (
+                    <Plus size={32} />
+                  )}
+                </span>
                 </div>
-                <span className="mx-[10px] lg:hidden">
-                {selectedQuestion?.question === faq.question ? (
-                  <Minus size={32} />
-                ) : (
-                  <Plus size={32} />
-                )}
-              </span>
-              <span className="hidden lg:block mr-[63px]">
-                <ChevronRight size={32} />
-              </span>
+                
+                {/* <span className="hidden md:block mr-[63px]">
+                  <ChevronRight size={32} />
+                </span> */}
               </div>
 
               {/* Collapsible Answer Section */}
               <div
-                className={`overflow-hidden transition-[max-height] rounded-[25px] duration-500 lg:hidden text-[15px] bg-[#283618] ${
+                className={`overflow-hidden  mb-2 md:mb-[20px] transition-[max-height] rounded-[25px] duration-500 text-[15px]  bg-[#283618] ${
                   selectedQuestion?.question === faq.question
-                    ? "max-h-[500px] opacity-100 mt-2"
+                    ? "max-h-[500px] opacity-100 mt-2 md:py-[10px]"
                     : "max-h-0 opacity-0"
-
                 }`}
               >
-                <div className=" p-4 rounded-lg">
+                <div className=" p-4 rounded-md">
                   <p className="text-[#F2EFE7]">{faq.answer?.intro}</p>
                   {faq.answer?.points?.length > 0 && (
                     <ul className="list-disc pl-5 mt-2">
@@ -177,29 +175,15 @@ const Faq = () => {
           ))}
 
           {/* Contact Section */}
-          <div className="mt-4 p-4 text-black flex gap-1 lg:flex-col text-[15px]  lg:text-[20px]">
+          <div className="mt-4 p-4 text-black flex gap-1 md:flex-col text-[15px]  md:text-[20px]">
             <p>Need further Assistance? </p>
-            <a href="/contact" className="text-blue-500">Contact Us →</a>
+            <a href="/contact" className="text-blue-500">
+              Contact Us →
+            </a>
           </div>
         </div>
 
-{/* Right: Answer Box */}
-<div className="hidden lg:block w-[393px] lg:w-1/3 h-[700px] bg-[#283618] font-light mt-[50px] text-[#F2EFE7] text-[24px] px-[47px] py-[39px] rounded-[25px] ">
-          <p>{selectedQuestion? selectedQuestion?.answer.intro : nullText}</p>
-
-          {selectedQuestion?.answer.points.length > 0 && (
-            <ul className="list-disc pl-5 my-4">
-              {selectedQuestion.answer.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          )}
-
-          {selectedQuestion?.answer.followUp && (
-            <p>{selectedQuestion?.answer.followUp}</p>
-          )}
-        </div>
-
+        
       </div>
     </section>
   );

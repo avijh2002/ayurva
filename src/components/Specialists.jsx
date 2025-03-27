@@ -1,12 +1,7 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import SpecialistCard from "./SpecialistCard";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import docpic1 from "../assets/doc1.png";
 import docpic2 from "../assets/doc2.png";
-import docpic3 from "../assets/doc3.png";
 
 const specialistsData = [
   {
@@ -32,54 +27,32 @@ const specialistsData = [
   // },
 ];
 
-const ArrowButton = ({ onClick, direction }) => (
-  <button
-    className={`absolute -top-15 ${
-      direction === "left" ? "left-0" : "right-0"
-    } z-10 text-gray-400 hover:text-gray-200`}
-    onClick={onClick}
-  >
-    {direction === "left" ? (
-      <ChevronLeft size={32} />
-    ) : (
-      <ChevronRight size={32} />
-    )}
-  </button>
-);
+
 
 const Specialists = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    nextArrow: <ArrowButton direction="right" />,
-    prevArrow: <ArrowButton direction="left" />,
-  };
+  
 
   return (
-    <div className="mx-auto max-w-full flex flex-col items-center mb-16 ">
+    <div className="mx-auto  max-w-full flex flex-col items-center mb-16 ">
       {/* Title */}
       <h2 className="text-[22px] md:text-[40px] lg:text-4xl font-medium text-center mt-10 md:mt-16 mb-8 md:mb-12 ">
         Meet the Specialists
       </h2>
 
       {/* Specialist Cards - Carousel */}
-      <div className="w-full md:px-8 mx-auto ">
-        <Slider {...settings} className=" mx-auto">
+      <div className="w-full  md:px-8 mx-auto ">
+        <div  className="gap-9 md:gap-0 mx-auto flex flex-col items-center md:flex-row justify-evenly">
           {specialistsData.map((specialist, index) => (
             <SpecialistCard
               key={index}
+              sno={index}
               image={specialist.image}
               name={specialist.name}
               heading={specialist.heading}
               info={specialist.info}
             />
           ))}
-        </Slider>
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import Contactus from "./pages/Contactus.jsx";
 import Assessment from './pages/Assessment.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 import AuthGuard from './components/AuthGuard.jsx';
+import SpecialistsPage from './pages/Specialists.jsx';
 
 
 
@@ -35,6 +36,12 @@ function RoutesComponent() {
         <Route
           path="/assessment"
           element={<Assessment />}
+        />
+        <Route
+          path="/specialists"
+          element={
+              <SpecialistsPage />
+          }
         />
         <Route
           path="/admin"

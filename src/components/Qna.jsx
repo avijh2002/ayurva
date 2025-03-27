@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; 
+import React, { useState, useEffect } from "react";
 import Qnabox from "./Qnabox";
 import { FaAngleLeft } from "react-icons/fa";
 import QuizButton from "./QuizButton";
@@ -41,7 +41,9 @@ const Qna = ({ onComplete }) => {
 
     const responseEntry = {
       questionID: currentQuestionID,
-      questionText: `${question?.question} ${question?.instructions || ''}`.trim(),
+      questionText: `${question?.question} ${
+        question?.instructions || ""
+      }`.trim(),
       selectedOption,
       timestamp: new Date().toISOString(),
     };
@@ -79,7 +81,10 @@ const Qna = ({ onComplete }) => {
           2-Minute At-Home Pain Assessment
         </p>
         <p className="text-[#858585] text-sm md:text-[20px] md:mx-11 sm:text-[16px] lg:text-[20px] font-normal">
-          Answer simple questions about your pain levels, lifestyle, and symptoms. This will help us understand your needs better. After completing the test, you will receive an initial pain analysis and personalized recommendations.
+          Answer simple questions about your pain levels, lifestyle, and
+          symptoms. This will help us understand your needs better. After
+          completing the test, you will receive an initial pain analysis and
+          personalized recommendations.
         </p>
       </div>
 
@@ -104,7 +109,9 @@ const Qna = ({ onComplete }) => {
         </div>
 
         <div className="flex items-center justify-center text-xl text-center sm:text-2xl lg:text-3xl text-white">
-          <p>{question?.question} {question?.instructions}</p>
+          <p>
+            {question?.question} {question?.instructions}
+          </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2.5 sm:justify-center md:justify-center sm:gap-[31px] md:gap-1/20 mt-[58px]">
@@ -119,6 +126,20 @@ const Qna = ({ onComplete }) => {
             />
           ))}
         </div>
+
+        {question?.video && (
+          <div className="w-full md:w-2/5 rounded-3xl mx-auto bg-blue-200 mt-8">
+            <div className="relative w-full pb-[56.25%]">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="video"
+                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-xl"
+              ></iframe>
+            </div>
+          </div>
+        )}
 
         <div className="mt-8 flex justify-end md:mr-[27px]">
           <QuizButton onClick={handleNext} />

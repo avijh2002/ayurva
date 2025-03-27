@@ -10,7 +10,6 @@ const Footer2 = () => {
 
   useEffect(() => {
     if (scrollTarget) {
-      console.log("sbhvvcav")
       setTimeout(() => {
         scrollToElement(scrollTarget);
         setScrollTarget(null);
