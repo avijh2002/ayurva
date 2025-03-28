@@ -128,7 +128,7 @@ const Qna = ({ onComplete }) => {
         </div>
 
         {question?.video && (
-          <div className="w-full md:w-2/5 rounded-3xl mx-auto bg-blue-200 mt-8">
+          <div className="w-full md:w-2/5 rounded-3xl mx-auto  mt-8 flex flex-col items-center">
             <div className="relative w-full pb-[56.25%]">
               <iframe
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -138,6 +138,7 @@ const Qna = ({ onComplete }) => {
                 className="absolute top-0 left-0 w-full h-full rounded-xl"
               ></iframe>
             </div>
+            <p className="text-white text-center text-xs md:text-lg">Refer to the video for a demonstration of the test</p>
           </div>
         )}
 
