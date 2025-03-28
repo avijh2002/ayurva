@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
 
   const toggleVisibility = () => {
     setIsVisible(window.scrollY > 300);
@@ -17,10 +19,12 @@ const BackToTopButton = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
+  const bgColor = location.pathname.startsWith('/admin') ? 'bg-blue-500' : 'bg-[#283618]';
+
   return (
     <button
       onClick={scrollToTop}
-      className={`cursor-pointer fixed bottom-6 right-6 p-3 bg-[#283618] text-white rounded-full shadow-lg transition-opacity ${
+      className={`cursor-pointer fixed bottom-6 right-6 p-3 ${bgColor} text-white rounded-full shadow-lg transition-opacity ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       aria-label="Back to Top"

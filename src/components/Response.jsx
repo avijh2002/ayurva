@@ -53,7 +53,7 @@ const Responses = () => {
             {/* Delete Button */}
             <button
               onClick={() => handleDelete(response.id)}
-              className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 mt-4"
+              className="cursor-pointer bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 mt-4"
             >
               Delete
             </button>

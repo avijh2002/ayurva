@@ -60,7 +60,7 @@ const Inquiries = () => {
                 <td className="border border-gray-300 p-2">
                   <button
                     onClick={() => handleDelete(inquiry.id)}
-                    className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600"
+                    className="cursor-pointer bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600"
                   >
                     Delete
                   </button>

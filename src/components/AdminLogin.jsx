@@ -38,7 +38,7 @@ const AdminLogin = ({ onLogin }) => {
           className="border p-2 mb-2 w-full rounded-xl"
         />
         {error && <p className="text-red-500">{error}</p>}
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-2xl">
+        <button type="submit" className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded-2xl">
           Login as Admin
         </button>
       </form>

@@ -31,7 +31,7 @@ const AdminDashboard = () => {
         <h1 className="text-2xl font-bold">Welcome To Admin Dashboard</h1>
         <button
           onClick={handleLogout}
-          className="bg-red-500 text-white px-4 py-2 rounded-lg"
+          className="cursor-pointer bg-red-500 text-white px-4 py-2 rounded-lg"
         >
           Logout
         </button>
@@ -40,13 +40,13 @@ const AdminDashboard = () => {
       <div className="p-4">
         <button
           onClick={() => setActiveTab('responses')}
-          className={`mr-4 p-2 rounded-lg ${activeTab === 'responses' ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
+          className={`cursor-pointer mr-4 p-2 rounded-lg ${activeTab === 'responses' ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
         >
           Responses
         </button>
         <button
           onClick={() => setActiveTab('inquiries')}
-          className={`p-2 rounded-lg ${activeTab === 'inquiries' ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
+          className={`cursor-pointer p-2 rounded-lg ${activeTab === 'inquiries' ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}
         >
           Inquiries
         </button>
