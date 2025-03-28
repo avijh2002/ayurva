@@ -19,8 +19,6 @@ const Footer = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.warn(`Element with id '${id}' not found`);
     }
   };
   return (
@@ -93,7 +91,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => handleClick("services")}
-                  className="hover:text-white transition-colors"
+                  className="cursor-pointer hover:text-white transition-colors"
                 >
                   Services
                 </button>
@@ -102,7 +100,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => handleClick("faq")}
-                  className="hover:text-white transition-colors"
+                  className="cursor-pointer hover:text-white transition-colors"
                 >
                   FAQ
                 </button>

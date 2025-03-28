@@ -5,11 +5,13 @@ import QuizButton from "./QuizButton";
 import fetchQuestions from "../config/fetchQuestions";
 import { Loader } from "lucide-react";
 import toast from "react-hot-toast";
+import { useNavigate} from "react-router-dom";
 
 const Qna = ({ onComplete }) => {
   const [currentQuestionID, setCurrentQuestionID] = useState("Q1");
   const [question, setQuestion] = useState(null);
   const [responses, setResponses] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadQuestions = async () => {
@@ -23,7 +25,7 @@ const Qna = ({ onComplete }) => {
     if (question?.result) {
       onComplete(question?.result, responses);
     }
-  }, [question, onComplete, responses]);
+  }, [question?.result, onComplete, responses]);
 
   const totalQuestions = 4;
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -65,6 +67,11 @@ const Qna = ({ onComplete }) => {
       setSelectedOption(prevResponse?.selectedOption || null);
       setBg(null);
     }
+    else{
+      if (window.confirm("Are you sure you want to go back to the homepage?")) {
+        navigate("/");
+      }
+    }
   };
 
   if (!question)
@@ -93,7 +100,6 @@ const Qna = ({ onComplete }) => {
           <button
             className=" w-11 h-11 rounded-full bg-white flex items-center justify-center"
             onClick={handlePrevious}
-            disabled={currentQuestion === 0}
           >
             <FaAngleLeft className="text-lg font-extralight text-[#283618]" />
           </button>
@@ -129,7 +135,7 @@ const Qna = ({ onComplete }) => {
 
         {question?.video && (
           <div className="w-full md:w-2/5 rounded-3xl mx-auto  mt-8 flex flex-col items-center">
-            <div className="relative w-full pb-[56.25%]">
+            <div className="cursor-pointer relative w-full pb-[56.25%]">
               <iframe
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                 title="video"

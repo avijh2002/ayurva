@@ -42,7 +42,7 @@ const Contactform = () => {
               value={formData.subject}
               onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
             />
-            <button className="w-full bg-[#283618] text-white p-3 rounded-3xl hover:bg-[#3a4e2c] transition">
+            <button className="cursor-pointer w-full bg-[#283618] text-white p-3 rounded-3xl hover:bg-[#3a4e2c] transition">
               Submit
             </button>
           </form>

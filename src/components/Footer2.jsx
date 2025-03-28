@@ -44,12 +44,12 @@ const Footer2 = () => {
               <li><Link to="/" className="hover:text-gray-950 transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-gray-950 transition-colors">About Us</Link></li>
               <li>
-                <button onClick={() => handleClick("services")} className="hover:text-gray-950 transition-colors">
+                <button onClick={() => handleClick("services")} className="cursor-pointer hover:text-gray-950 transition-colors">
                   Services
                 </button>
               </li>
               <li>
-                <button onClick={() => handleClick("faq")} className="hover:text-gray-950 transition-colors">
+                <button onClick={() => handleClick("faq")} className="cursor-pointer hover:text-gray-950 transition-colors">
                   FAQ
                 </button>
               </li>

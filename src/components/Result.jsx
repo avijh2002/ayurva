@@ -42,7 +42,7 @@ const EmailInput = ({ onEmailSubmit }) => {
         {error && <p className="text-red-500 mb-4">{error}</p>}
         <button
           type="submit"
-          className={`w-full h-12 bg-[#283618] text-white rounded-2xl ${
+          className={`cursor-pointer w-full h-12 bg-[#283618] text-white rounded-2xl ${
             !email ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={!email}
@@ -135,7 +135,7 @@ const Result = ({
                     value={mobile}
                     onChange={(e) => setMobile(e.target.value)}
                   />
-                  <button className="w-full h-12 bg-[#283618] text-white rounded-2xl">
+                  <button className="cursor-pointer w-full h-12 bg-[#283618] text-white rounded-2xl">
                     Save
                   </button>
                 </form>

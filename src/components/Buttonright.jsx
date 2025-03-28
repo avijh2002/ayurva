@@ -11,7 +11,7 @@ const Buttonright = ({ info, bgColor, textColor, arrowBg, arrowColor}) => {
   }
 
   return (
-    <button  onClick={handleClick} className={`md:px-2 w-[190px] md:w-[253px] py-1 bg-[#283618] rounded-full flex md:items-center md:justify-end md:gap-4`}>
+    <button  onClick={handleClick} className={`cursor-pointer md:px-2 w-[190px] md:w-[253px] py-1 bg-[#283618] rounded-full flex md:items-center md:justify-end md:gap-4`}>
       <div className="flex items-center justify-center text-center mx-auto">
         <p className="  text-white text-sm text-start font-semibold">{info}</p>
       </div>
