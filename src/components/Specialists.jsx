@@ -41,7 +41,7 @@ const Specialists = () => {
 
       {/* Specialist Cards - Carousel */}
       <div className="w-full  md:px-8 mx-auto ">
-        <div  className="gap-9 md:gap-0 mx-auto flex flex-col items-center md:flex-row justify-evenly">
+        <div  className="gap-5 md:gap-0 mx-auto flex flex-col items-center md:flex-row justify-evenly">
           {specialistsData.map((specialist, index) => (
             <SpecialistCard
               key={index}
