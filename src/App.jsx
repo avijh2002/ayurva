@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { Outlet, useLocation } from "react-router-dom";
+import BackToTopButton from "./components/BackToTop";
 
 const App = () => {
   const location = useLocation();
@@ -12,6 +13,7 @@ const App = () => {
       <Toaster />
       {!hideNavbar && <Navbar />}
       <Outlet />
+      <BackToTopButton/>
     </>
   );
 };
