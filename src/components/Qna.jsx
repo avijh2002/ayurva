@@ -5,7 +5,8 @@ import QuizButton from "./QuizButton";
 import fetchQuestions from "../config/fetchQuestions";
 import { Loader } from "lucide-react";
 import toast from "react-hot-toast";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import VideoPlayer from "./VideoPlayer";
 
 const Qna = ({ onComplete }) => {
   const [currentQuestionID, setCurrentQuestionID] = useState("Q1");
@@ -66,8 +67,7 @@ const Qna = ({ onComplete }) => {
       setAnswered((prev) => prev - 1);
       setSelectedOption(prevResponse?.selectedOption || null);
       setBg(null);
-    }
-    else{
+    } else {
       if (window.confirm("Are you sure you want to go back to the homepage?")) {
         navigate("/");
       }
@@ -120,7 +120,7 @@ const Qna = ({ onComplete }) => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2.5 sm:justify-center md:justify-center sm:gap-[31px] md:gap-1/20 mt-[58px]">
+        <div className="flex flex-wrap justify-center gap-2 sm:justify-center md:justify-center sm:gap-[31px] md:gap-1/20 mt-[58px]">
           {question?.options?.map((option, index) => (
             <Qnabox
               key={option}
@@ -134,18 +134,11 @@ const Qna = ({ onComplete }) => {
         </div>
 
         {question?.video && (
-          <div className="w-full md:w-2/5 rounded-3xl mx-auto  mt-8 flex flex-col items-center">
-            <div className="cursor-pointer relative w-full pb-[56.25%]">
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="video"
-                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full rounded-xl"
-              ></iframe>
-            </div>
-            <p className="text-white text-center text-xs md:text-lg">Refer to the video for a demonstration of the test</p>
-          </div>
+          <VideoPlayer
+            videoId={question.video}
+            start={question.start}
+            end={question.end}
+          />
         )}
 
         <div className="mt-8 flex justify-end md:mr-[27px]">
