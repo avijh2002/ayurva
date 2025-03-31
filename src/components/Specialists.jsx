@@ -23,7 +23,7 @@ const specialistsData = [
     image: docpic3,
     name: "Dr. Hithesh A.V.",
     heading:
-      "Dr. Hithesh A.V. (Counseling & Psychotherapy), with 15+ years of experience, he specializes in Yoga therapy, Naturopathy, and wellness management, including Hydrotherapy, Nutrition, and stress management.",
+      "Dr. Hithesh A.V. (Counseling & Psychotherapy), with 15+ years of experience, he specializes in Yoga therapy, Naturopathy, and wellness management, including Chiropractic, Osteopathy & Nutrition.",
     info: "DR. HITHESH A.V., B.N.Y.S., M.S. (Counseling & Psychotherapy) A seasoned Yoga and Holistic Health Consultant, holding a BNYS (Bachelor of Naturopathy and Yogic Sciences ), with 15+ years of experience. Expertise spans Yoga therapy, Naturopathy, and wellness management, including Hydrotherapy, Chiropractic and Osteopathy, and Nutrition. Skilled in diverse Yoga techniques, meditation, and stress management, and adept at delivering both personalized consultations and corporate wellness sessions.",
   },
 ];
