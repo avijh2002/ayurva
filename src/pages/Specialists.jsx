@@ -1,16 +1,16 @@
-import React ,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Footer2 from "../components/Footer2";
 import docpic1 from "../assets/doc1.png";
 import docpic2 from "../assets/doc2.png";
+import docpic3 from "../assets/doc3.jpeg";
 
 const SpecialistsPage = () => {
-
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
-      const element = document.getElementById(hash.replace('#', ''));
+      const element = document.getElementById(hash.replace("#", ""));
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
@@ -30,7 +30,7 @@ const SpecialistsPage = () => {
           className="h-[167px] w-[167px] md:h-[205px] md:w-[205px] my-[37px] sm:my-[45px] md:my-[50px] rounded-xl  "
         />
 
-        <p className=" text-[14px] md:text-[25px] font-semibold text-[#757575] mb-4 text-left md:text-center">
+        <p className=" text-[14px] md:text-[25px] font-normal text-[#757575] mb-4 text-left md:text-center">
           Dr. Sathyavathi B is a seasoned homeopathic consultant with 24 years
           of dedicated clinical practice. Her extensive experience encompasses a
           broad spectrum of patient care, establishing her as a respected figure
@@ -64,7 +64,7 @@ const SpecialistsPage = () => {
           alt="doctor"
           className="h-[113px] w-[113px] md:h-[205px] md:w-[205px] my-[37px] sm:my-[45px] md:my-[50px] rounded-xl  "
         />
-        <p className="  text-[14px] md:text-[25px] font-semibold text-[#757575] mb-4 text-right md:text-center">
+        <p className="  text-[14px] md:text-[25px] font-normal text-[#757575] mb-4 text-right md:text-center">
           Dr. Subramanya Rao, a veteran Ayurvedic practitioner, boasts 34 years
           of rich experience. His dedication extends beyond clinical practice to
           global outreach, promoting Ayurveda through lectures across Moscow,
@@ -75,6 +75,31 @@ const SpecialistsPage = () => {
           traditional wisdom with modern research. His extensive international
           engagement highlights his role as a key ambassador for Ayurveda,
           fostering its understanding and acceptance worldwide.
+        </p>
+      </div>
+
+      <div
+        id="specialist2"
+        className=" px-[35px] md:px-[100px] md:py-[100px] py-[118px]  flex flex-col items-center"
+      >
+        <h3 className="text-2xl text-24px md:text-[48px] font-semibold ">
+          Dr. Hithesh A.V.
+        </h3>
+        <img
+          src={docpic3}
+          alt="doctor"
+          className="h-[167px] w-[167px] md:h-[205px] md:w-[205px] my-[37px] sm:my-[45px] md:my-[50px] rounded-xl  "
+        />
+
+        <p className=" text-[14px] md:text-[25px] font-normal text-[#757575] mb-4 text-left md:text-center">
+          Dr. Hithesh A.V., B.N.Y.S., M.S. (Counseling & Psychotherapy) A
+          seasoned Yoga and Holistic Health Consultant, holding a BNYS (Bachelor
+          of Naturopathy and Yogic Sciences ), with 15+ years of experience.
+          Expertise spans Yoga therapy, Naturopathy, and wellness management,
+          including Hydrotherapy, Chiropractic and Osteopathy, and Nutrition.
+          Skilled in diverse Yoga techniques, meditation, and stress management,
+          and adept at delivering both personalized consultations and corporate
+          wellness sessions.
         </p>
       </div>
 

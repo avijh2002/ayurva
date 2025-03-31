@@ -1,18 +1,17 @@
-import {useState,useEffect} from "react";
+import { useState, useEffect } from "react";
 import myImage from "../assets/logo.png";
 import footerBanner from "../assets/footerBanner.png";
 import Buttonright from "./Buttonright";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Link,useLocation,useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const [scrollTarget, setScrollTarget] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
 
-
   const handleClick = (name) => {
-      scrollToElement(name);
+    scrollToElement(name);
   };
 
   const scrollToElement = (id) => {
@@ -126,17 +125,32 @@ const Footer = () => {
             </p>
             <p className="text-sm mt-4 md:text-2xl space-y-2">+91 8007968715</p>
             <div className="hidden md:flex justify-between w-2/3 text-white  text-xl mt-20">
-              <a href="#" className="hover:text-gray-400">
+              <a
+                href="https://www.instagram.com/ayurva.digital/"
+                target="_blank"
+                className="hover:text-gray-400"
+              >
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="hover:text-gray-400">
-                <i className="fab fa-x-twitter"></i>
-              </a>
-              <a href="#" className="hover:text-gray-400">
+              {/* <a href="#" target="_blank" className="hover:text-gray-400">
+              <i className="fab fa-x-twitter"></i>
+            </a> */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61574189353169#"
+                target="_blank"
+                className="hover:text-gray-400"
+              >
                 <i className="fab fa-facebook"></i>
               </a>
-              <a href="#" className="hover:text-gray-400">
-                <i className="fab fa-youtube"></i>
+              {/* <a href="#" target="_blank" className="hover:text-gray-400">
+              <i className="fab fa-youtube"></i>
+            </a> */}
+              <a
+                href="https://www.linkedin.com/company/ayurvadigital"
+                target="_blank"
+                className="hover:text-gray-400"
+              >
+                <i className="fab fa-linkedin"></i>
               </a>
             </div>
           </div>
@@ -147,17 +161,32 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col  w-1/3 items-end justify-between md:hidden  text-white  text-xl">
-            <a href="#" className="hover:text-gray-400">
+            <a
+              href="https://www.instagram.com/ayurva.digital/"
+              target="_blank"
+              className="hover:text-gray-400"
+            >
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="hover:text-gray-400">
+            {/* <a href="#" target="_blank" className="hover:text-gray-400">
               <i className="fab fa-x-twitter"></i>
-            </a>
-            <a href="#" className="hover:text-gray-400">
+            </a> */}
+            <a
+              href="https://www.facebook.com/profile.php?id=61574189353169#"
+              target="_blank"
+              className="hover:text-gray-400"
+            >
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="#" className="hover:text-gray-400">
+            {/* <a href="#" target="_blank" className="hover:text-gray-400">
               <i className="fab fa-youtube"></i>
+            </a> */}
+            <a
+              href="https://www.linkedin.com/company/ayurvadigital"
+              target="_blank"
+              className="hover:text-gray-400"
+            >
+              <i className="fab fa-linkedin"></i>
             </a>
           </div>
         </div>

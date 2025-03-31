@@ -2,6 +2,7 @@ import React from "react";
 import SpecialistCard from "./SpecialistCard";
 import docpic1 from "../assets/doc1.png";
 import docpic2 from "../assets/doc2.png";
+import docpic3 from "../assets/doc3.jpeg";
 
 const specialistsData = [
   {
@@ -18,13 +19,13 @@ const specialistsData = [
       "Dr. Subramanya Rao, a veteran Ayurvedic practitioner, boasts 34 years of rich experience. His dedication has global outreach, promoting Ayurveda through lectures across Moscow, the  Netherlands, Europe, and Canada. ",
     info: "Dr. Rao's commitment to scientific validation is evident in his collaborative clinical trials on Panchakarma treatment conducted in Moscow with the Institute of Traditional Medicine. These trials underscore his efforts to bridge traditional wisdom with modern research. His extensive international engagement highlights his role as a key ambassador for Ayurveda, fostering its understanding and acceptance worldwide. Dr. Subramanya Rao, with 34 years of experience, is a renowned Ayurvedic practitioner and global ambassador, promoting Ayurveda through international lectures and pioneering clinical trials on Panchakarma in collaboration with the Institute of Traditional Medicine in Moscow.",
   },
-  // {
-  //   image: docpic3,
-  //   name: "Dr. Subramanya Rao",
-  //   heading:
-  //     "Dr. Subramanya Rao, a veteran Ayurvedic practitioner, boasts 34 years of rich experience. His dedication  extends beyond clinical practice to global outreach, promoting Ayurveda through lectures across Moscow, the  Netherlands, Europe, and Canada. ",
-  //   info: "Dr. Rao's commitment to scientific validation is evident in his collaborative clinical trials on Panchakarma treatment conducted in Moscow with the Institute of Traditional Medicine. These trials underscore his efforts to bridge traditional wisdom with modern research. His extensive international engagement highlights his role as a key ambassador for Ayurveda, fostering its understanding and acceptance worldwide. Dr. Subramanya Rao, with 34 years of experience, is a renowned Ayurvedic practitioner and global ambassador, promoting Ayurveda through international lectures and pioneering clinical trials on Panchakarma in collaboration with the Institute of Traditional Medicine in Moscow.",
-  // },
+  {
+    image: docpic3,
+    name: "Dr. Hithesh A.V.",
+    heading:
+      "Dr. Hithesh A.V. (Counseling & Psychotherapy), with 15+ years of experience, he specializes in Yoga therapy, Naturopathy, and wellness management, including Hydrotherapy, Nutrition, and stress management.",
+    info: "DR. HITHESH A.V., B.N.Y.S., M.S. (Counseling & Psychotherapy) A seasoned Yoga and Holistic Health Consultant, holding a BNYS (Bachelor of Naturopathy and Yogic Sciences ), with 15+ years of experience. Expertise spans Yoga therapy, Naturopathy, and wellness management, including Hydrotherapy, Chiropractic and Osteopathy, and Nutrition. Skilled in diverse Yoga techniques, meditation, and stress management, and adept at delivering both personalized consultations and corporate wellness sessions.",
+  },
 ];
 
 
@@ -40,8 +41,8 @@ const Specialists = () => {
       </h2>
 
       {/* Specialist Cards - Carousel */}
-      <div className="w-full  md:px-8 mx-auto ">
-        <div  className="gap-5 md:gap-0 mx-auto flex flex-col items-center md:flex-row justify-evenly">
+      <div className="w-full  md:px-2 mx-auto ">
+        <div  className=" mx-auto  flex flex-col items-center md:flex-row justify-center gap-5 md:gap-5 ">
           {specialistsData.map((specialist, index) => (
             <SpecialistCard
               key={index}
