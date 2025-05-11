@@ -45,31 +45,10 @@ Check out the live version of Ayurva here:
   ```
 2. Open your browser and navigate to `http://localhost:3000`.
 
-## Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch:
-  ```bash
-  git checkout -b feature-name
-  ```
-3. Commit your changes:
-  ```bash
-  git commit -m "Add feature-name"
-  ```
-4. Push to your branch:
-  ```bash
-  git push origin feature-name
-  ```
-5. Open a pull request.
-
-
 
 ## Acknowledgments
 
 - Inspired by the timeless wisdom of Ayurveda.
-- Special thanks to contributors and the open-source community.
 
 ## Contact
 
